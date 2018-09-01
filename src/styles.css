@@ -1,1 +1,141 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --color-light5: #f4faf4;
+  --color-light4: #dbefdc;
+  --color-light3: #b7dfb8;
+  --color-light2: #93cf95 ;
+  --color-light1: #6ec071 ;
+  --color-primary: #459c48 ;
+  --color-dark1: #3d8b40 ;
+  --color-dark2: #3d8b40 ;
+  --color-dark3: #357a38 ;
+  --color-dark4: #2e6830 ;
+  --color-dark5: #265728 ;
+  --shadow: 0 2rem 6rem rgba(0,0,0,.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "verdana", sans-serif;
+  font-weight: 300;
+  color: #f4faf4;
+  line-height: 1.6;
+  background-image: linear-gradient(to right bottom, var(--color-light2), var(--color-dark4));
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.frame {
+  background-color: var(--color-light4);
+  max-width: 130rem;
+  margin: 8rem auto;
+  box-shadow: var(--shadow);
+  min-height: 100rem;
+}
+
+.header {
+  background-color: var(--color-primary);
+  height: 5rem;
+  border-bottom: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-light2);
+  min-width: 30rem;
+}
+.header__icons {
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 15rem;
+}
+
+.navbar {
+  background-color: var(--color-dark3);
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 20%;
+  min-height: 100rem;
+}
+
+.shop-view__container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5rem;
+}
+
+.logo {
+  height: 4rem;
+}
+
+.user-nav {
+  background-color: blue;
+}
+.user-nav__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.header__icon {
+  width: 3rem;
+}
+
+.type {
+  font-size: 4rem;
+}
+
+.categories {
+  font-size: 2rem;
+}
+
+.shop-view {
+  width: 25rem;
+  display: flex;
+  flex: 1 0 33%;
+}
+.shop-view__img {
+  width: 10rem;
+}
+
+.shop-main {
+  display: flex;
+}
+
+.item-view__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 80rem;
+}
+
+.item-view {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.item-view__img {
+  width: 30rem;
+}
+
+/*# sourceMappingURL=styles.css.map */

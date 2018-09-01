@@ -25,7 +25,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["src/assets/ss-css/ssmain.js",
+            "src/assets/ss-css/placeholders.min.js"]
           },
           "configurations": {
             "production": {
@@ -74,7 +75,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": ["src/app/login/main.js",
+            "src/app/login/placeholders.min.js"],
             "assets": [
               "src/favicon.ico",
               "src/assets"

@@ -1,0 +1,65 @@
+.logo {
+    height: 4rem;
+}
+
+.user-nav {
+    background-color: blue;
+
+    &__icon{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
+
+.header__icon {
+    width:3rem;
+}
+
+
+/////////////////////////////////////////// navbar
+.type {
+    font-size: 4rem;
+}
+
+.categories {
+    font-size: 2rem;
+}
+
+
+
+/////////////////////////////////////////////  shop-view
+.shop-view {
+    width:25rem;
+    display:flex;
+    flex:1 0 33%;
+
+    
+    &__img {
+        width: 10rem;
+    }
+}
+
+.shop-main {
+    display:flex;
+}
+
+
+///////////////////////////// item-view
+
+
+.item-view__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+}
+.item-view {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.item-view__img {
+    width :30rem;
+}
