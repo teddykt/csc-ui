@@ -1,5 +1,5 @@
 <div class="item-view__container">
-  
+    <button class="back"> Back to Shop </button>
     <div class="item-view">
 
       <div class="item-view__img"><img src="../../assets/frame.jpg" alt=""></div>
@@ -8,8 +8,12 @@
         <div class="item-view__name"> Name </div>
         <div class="item-view__price"> {{ price }} </div>
         <div class="item-view__comment"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, autem. </div>
-        <div class="item-view__add-to-cart"> <button>add to cart</button>   or  <button>Buy Now!</button></div>
-        
+        <div class="item-view__stock">Available Quantity: {{ quantity }}</div>
+        <form action="">
+          <label for="quantity"> Quantity: </label>
+          <input type="text">
+          <div class="item-view__add-to-cart"> <button type="submit"> add to cart</button> </div>
+        </form>
       </div> 
     </div>
       <div class="item-view__points"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias ab aspernatur quaerat quia vel similique omnis laborum necessitatibus nesciunt dolore, aliquid assumenda praesentium veritatis et molestias tempora impedit reprehenderit cumque, esse, doloremque ullam nisi nobis veniam odit. Accusantium nobis expedita, libero officia velit eum? Unde quia aspernatur quasi magnam blanditiis.</div>

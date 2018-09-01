@@ -3,14 +3,20 @@
             
         <div class="header__items">
             <a routerLinkActive="active" routerLink="/home"> <img src="../assets/logo.png" alt="logo" class ="logo"> </a>
-            <a routerLinkActive="active" routerLink="/login">Contact Us</a>
+            <a routerLinkActive="active" routerLink="/info">Contact Us</a>
             <a routerLinkActive="active" routerLink="/shop">Shop</a>
       
         </div>
 
-        <div class="header__search">
-          search here
-        </div>
+
+        <form action="#" class="search">
+            <input type="text" class="search__input" placeholder="Search items">
+            <button class="search__button">
+                <svg class="search__icon">
+                    <use xlink:href="../assets/img/sprite.svg#icon-search"></use>
+                </svg>
+            </button>
+        </form>
 
         <div class=" js-signin-modal-trigger header__login">
             <div><a href="home#0" data-signin="login">Sign in</a> </div>

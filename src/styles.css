@@ -34,10 +34,7 @@ body {
   font-weight: 300;
   color: #f4faf4;
   line-height: 1.6;
-  background-image: linear-gradient(to right bottom, var(--color-light2), var(--color-dark4));
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(214, 200, 122, 0.6), rgba(51, 37, 9, 0.6)), url("assets/img/csc-bg.jpg");
 }
 
 .frame {
@@ -76,6 +73,9 @@ body {
   flex: 0 0 20%;
   min-height: 100rem;
 }
+.navbar__fixed {
+  position: fixed;
+}
 
 .shop-view__container {
   display: flex;
@@ -98,6 +98,52 @@ body {
 .header__icon {
   width: 2.5rem;
   height: 2.5rem;
+}
+
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search__input {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: var(--color-light2);
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 100px;
+  width: 90%;
+  transition: all 0.2s;
+  margin-right: -3.25rem;
+}
+.search__input:focus {
+  outline: none;
+  width: 100%;
+  background-color: var(--color-light3);
+}
+.search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: var(--color-light4);
+}
+.search__input:focus + .search__button {
+  background-color: var(--color-light3);
+}
+.search__button {
+  border: none;
+  background-color: var(--color-light2);
+}
+.search__button:focus {
+  outline: none;
+}
+.search__button:active {
+  transform: translateY(2px);
+}
+.search__icon {
+  height: 2rem;
+  width: 2rem;
+  fill: var(--color-dark5);
 }
 
 .type {

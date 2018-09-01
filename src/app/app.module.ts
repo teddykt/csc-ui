@@ -17,6 +17,7 @@ const appRoutes: Routes = [
   { path: 'shop', component: ShopComponent},
   { path: 'cart', component: CartComponent},
   { path: 'item', component: ItemComponent},
+  { path: 'info', component: InfoComponent},
   { path: '', pathMatch: 'full', redirectTo: 'home'}
 
 ];

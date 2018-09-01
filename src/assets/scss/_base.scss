@@ -35,9 +35,5 @@ body {
     font-weight: 300;
     color: #f4faf4;
     line-height: 1.6;
-    background-image: linear-gradient(to right bottom, var(--color-light2), var(--color-dark4));
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-
+    background-image: linear-gradient(to right bottom, rgba(214, 200, 122, 0.6), rgba(51, 37, 9, 0.6)), url("assets/img/csc-bg.jpg");
 }
