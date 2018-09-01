@@ -1,7 +1,7 @@
 <div class="shop-main">
       <nav class="navbar">
           <div class="type">Antiques
-              <div class="categories">dishes</div>
+              <div class="categories">wattt</div>
               <div class="categories">table</div>
               <div class="categories">sofa</div>
           </div>
@@ -12,16 +12,16 @@
           </div>
       </nav>
 
-  <div class="shop-view__container">
+  <div class="shop-view">
 
-    <div class="shop-view" *ngFor="let price of prices">
+    <div class="shop-view__each" *ngFor="let price of prices">
       <a routerLinkActive="active" routerLink="/item">
-        <div class="shop-view__img"><img src="../../assets/logo.png" alt=""></div>
+        <div class="shop-view__each--img"><img src="../../assets/frame.jpg" alt=""></div>
         
         <div class="shop-view__detail">
-          <div class="shop-view__price"> {{ price }} </div>
-          <div class="shop-view__comment"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, autem. </div>
-          <div class="shop-view__add-to-cart"> <button>add to cart</button>   or  <button>Buy Now!</button></div>
+          <div class="shop-view__detail--price"> {{ price }} </div>
+          <div class="shop-view__detail--comment"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, autem. </div>
+          <div class="shop-view__detail--add-to-cart"> <button>add to cart</button>   or  <button>Buy Now!</button></div>
         </div>
       </a>
     </div>

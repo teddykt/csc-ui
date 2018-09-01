@@ -108,14 +108,22 @@ body {
 }
 
 .shop-view {
-  width: 25rem;
-  display: flex;
-  flex: 1 0 33%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 5rem;
+  grid-column-gap: 7rem;
+  padding: 5rem;
 }
-.shop-view__img {
-  width: 10rem;
+.shop-view__each--img {
+  width: 100%;
 }
-
+.shop-view__detail {
+  display: grid;
+  justify-items: center;
+}
+.shop-view__detail--comment {
+  text-align: center;
+}
 .shop-main {
   display: flex;
 }
