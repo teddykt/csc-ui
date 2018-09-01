@@ -1,15 +1,9 @@
 :root {
-  --color-light5: #f4faf4;
-  --color-light4: #dbefdc;
-  --color-light3: #b7dfb8;
-  --color-light2: #93cf95 ;
-  --color-light1: #6ec071 ;
-  --color-primary: #459c48 ;
-  --color-dark1: #3d8b40 ;
-  --color-dark2: #3d8b40 ;
-  --color-dark3: #357a38 ;
-  --color-dark4: #2e6830 ;
-  --color-dark5: #265728 ;
+  --color-light2: #f9f3e4 ;
+  --color-light1: #b09f8f ;
+  --color-primary: #875945;
+  --color-dark1:#3a2626 ;
+  --color-dark2: #1a0c0c ;
   --shadow: 0 2rem 6rem rgba(0,0,0,.5);
 }
 
@@ -30,18 +24,18 @@ html {
 }
 
 body {
-  font-family: "verdana", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 300;
   color: #f4faf4;
   line-height: 1.6;
-  background-image: linear-gradient(to right bottom, var(--color-light2), var(--color-dark4));
+  background-image: linear-gradient(to right bottom, var(--color-light2), var(--color-dark1));
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
 }
 
 .frame {
-  background-color: var(--color-light4);
+  background-color: var(--color-light2);
   max-width: 130rem;
   margin: 8rem auto;
   box-shadow: var(--shadow);
@@ -49,7 +43,7 @@ body {
 }
 
 .header {
-  background-color: var(--color-primary);
+  background-color: var(--color-dark2);
   height: 5rem;
   border-bottom: black;
   display: flex;
@@ -70,7 +64,7 @@ body {
 }
 
 .navbar {
-  background-color: var(--color-dark3);
+  background-color: var(--color-dark2);
   display: flex;
   flex-direction: column;
   flex: 0 0 20%;
@@ -87,9 +81,6 @@ body {
   height: 4rem;
 }
 
-.user-nav {
-  background-color: blue;
-}
 .user-nav__icon {
   width: 2.5rem;
   height: 2.5rem;
@@ -125,6 +116,7 @@ body {
 .shop-view__detail--comment {
   text-align: center;
 }
+
 .shop-main {
   display: flex;
 }
