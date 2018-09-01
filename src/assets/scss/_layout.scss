@@ -37,6 +37,10 @@
     flex-direction: column;
     flex: 0 0 20%;
     min-height: 100rem;
+
+    &__fixed {
+        position: fixed;
+    }
 }
 
 .shop-view__container {
