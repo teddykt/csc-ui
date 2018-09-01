@@ -8,6 +8,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ShopComponent } from './shop/shop.component';
 import { CartComponent } from './cart/cart.component';
 import { ItemComponent } from './item/item.component';
+import { InfoComponent } from './info/info.component';
 
 
 const appRoutes: Routes = [
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
     HomeComponent,
     ShopComponent,
     CartComponent,
-    ItemComponent
+    ItemComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,

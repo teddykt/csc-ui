@@ -3,8 +3,8 @@
             
         <div class="header__items">
             <a routerLinkActive="active" routerLink="/home"> <img src="../assets/logo.png" alt="logo" class ="logo"> </a>
-            <div><a routerLinkActive="active" routerLink="/login">Contact Us</a></div>
-            <div><a routerLinkActive="active" routerLink="/shop">Shop</a></div>
+            <a routerLinkActive="active" routerLink="/login">Contact Us</a>
+            <a routerLinkActive="active" routerLink="/shop">Shop</a>
       
         </div>
 
@@ -17,16 +17,27 @@
             <div> <a href="home#0" data-signin="signup">Sign up</a></div>
         </div>
         <div class="header__icons">
-            <div class="header__icons-box">
-                <svg class="header__icon">
-                    <use xlink:href="../assets/img/sprite.svg#icon-user"></use>
+            
+            <div class="header__icons-box dropdown">
+                <svg class="header__icon dropbtn">
+                    <use xlink:href="../assets/img/sprite.svg#icon-user1"></use>
                 </svg>
+                <div class="dropdown-content">
+                    <a routerLinkActive="active" routerLink="/myProfile">My profile</a>
+                    <a routerLinkActive="active" routerLink="/myOrder">My orders</a>
+                    <a routerLinkActive="active" routerLink="/logout">Log out</a>
+                
+                </div>
             </div>
-            <div class="header__icons-box">
-                <svg class="header__icon">
-                    <use xlink:href="../assets/img/sprite.svg#icon-user"></use>
-                </svg>
-            </div>
+
+            <a routerLinkActive="active" routerLink="/cart">
+              <div class="header__icons-box">
+                  <svg class="header__icon">
+                      <use xlink:href="../assets/img/sprite.svg#icon-cart"></use>
+                  </svg>
+              </div>
+            </a>
+
         </div>
 
     </header>
