@@ -30,15 +30,22 @@
           search here
         </div>
 
-        <div class=" js-signin-modal-trigger header__before-login">
+        <div class=" js-signin-modal-trigger header__login">
             <div><a href="home#0" data-signin="login">Sign in</a> </div>
             <div> <a href="home#0" data-signin="signup">Sign up</a></div>
         </div>
-        <span sec:authorize="isAuthenticated()">
-        <div class="header__after-login">
-          <a (click)="logout()">Logout</a>  
+        <div class="header__icons">
+            <div class="header__icons-box">
+                <svg class="header__icon">
+                    <use xlink:href="../assets/img/sprite.svg#icon-user"></use>
+                </svg>
+            </div>
+            <div class="header__icons-box">
+                <svg class="header__icon">
+                    <use xlink:href="../assets/img/sprite.svg#icon-user"></use>
+                </svg>
+            </div>
         </div>
-        </span>
 
     </header>
     <app-root></app-root>
