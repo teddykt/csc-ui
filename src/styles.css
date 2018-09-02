@@ -1,0 +1,251 @@
+:root {
+  --shadow: 0 2rem 6rem rgba(0,0,0,.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  color: #6D5D4B;
+  line-height: 1.6;
+  background-image: linear-gradient(to right bottom, rgba(54, 53, 53, 0.6), rgba(37, 39, 40, 0.6)), url("assets/img/csc-bg.jpg");
+}
+
+a {
+  text-decoration: none;
+  color: #6D5D4B;
+}
+
+.frame {
+  background-color: #e8dfd7;
+  max-width: 130rem;
+  margin: 8rem auto;
+  box-shadow: var(--shadow);
+  min-height: 100rem;
+}
+
+.header {
+  background-color: #d2c0b2;
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__items {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 30rem;
+}
+.header__icons {
+  display: flex;
+  justify-content: space-evenly;
+  min-width: 15rem;
+}
+.header__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.header__login {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.header__logo {
+  width: 5rem;
+  height: 5rem;
+}
+
+.navbar {
+  background-image: linear-gradient(rgba(10, 7, 6, 0.93), rgba(47, 36, 28, 0.93));
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  flex: 0 0 18%;
+  min-height: 100rem;
+  color: #6D5D4B;
+}
+
+.shop-view__container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5rem;
+}
+
+.logo {
+  height: 4rem;
+}
+
+.user-nav__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search__input {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: #e8dfd7;
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 100px;
+  width: 90%;
+  transition: all 0.2s;
+  margin-right: -3.25rem;
+}
+.search__input:focus {
+  outline: none;
+  width: 100%;
+  background-color: #d2c0b2;
+}
+.search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: #6D5D4B;
+}
+.search__input:focus + .search__button {
+  background-color: #d2c0b2;
+}
+.search__button {
+  border: none;
+  background-color: #e8dfd7;
+}
+.search__button:focus {
+  outline: none;
+}
+.search__button:active {
+  transform: translateY(2px);
+}
+.search__icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.type {
+  margin-top: 3.5rem;
+  margin-left: 2.5rem;
+  font-size: 2.5rem;
+  color: #a68468;
+  font-weight: 300;
+}
+
+.categories {
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.categories__link {
+  color: #bca28d;
+}
+
+.shop-view {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 5rem;
+  grid-column-gap: 7rem;
+  padding: 5rem;
+}
+.shop-view__each {
+  display: block;
+}
+.shop-view__each--img-1 {
+  display: inline-block;
+}
+.shop-view__each--img-2 {
+  display: none;
+}
+.shop-view__each:hover .shop-view__each--img-1 {
+  display: none;
+}
+.shop-view__each:hover .shop-view__each--img-2 {
+  display: inline-block;
+}
+.shop-view__each:hover .shop-view__detail {
+  transform: scale(1.05);
+  transition: all 0.1s;
+}
+.shop-view__detail {
+  color: #6D5D4B;
+  display: grid;
+  justify-items: start;
+  margin-left: 2.4rem;
+  width: 90%;
+}
+.shop-main {
+  display: flex;
+}
+
+.item-view__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 80rem;
+}
+
+.item-view {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.item-view__img {
+  width: 30rem;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.item-view__container {
+  display: flex;
+}
+
+/*# sourceMappingURL=styles.css.map */

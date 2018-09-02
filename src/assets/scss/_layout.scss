@@ -1,5 +1,5 @@
 .frame {
-    background-color: var(--color-light2);
+    background-color: $color-primary-lightest;
     max-width: 130rem;
     margin: 8rem auto;
     box-shadow:   var(--shadow);
@@ -7,19 +7,21 @@
 }
 
 .header {
-    background-color:  var(--color-dark2);
-    height: 5rem;
-    border-bottom: black;
+    background-color:  $color-primary-light;
+    height: 7rem;
+
     display:flex;
     justify-content: space-between;
     align-items: center;
 
     &__items {
+        
         display:flex;
         align-items: center;
-        justify-content: space-between;
-        background-color:  var(--color-light2);
+        justify-content: space-around;
         min-width: 30rem;
+        
+        
     }
 
 
@@ -28,20 +30,39 @@
         justify-content: space-evenly;
         min-width : 15rem;
     }
+
+    &__icon{
+        width:2.5rem;
+        height:2.5rem;
+    }
+    
+    &__login{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    &__logo{
+        width: 5rem;
+        height: 5rem;
+    }
 }
 
 
 .navbar {
-    background-color: var(--color-dark2);
+    
+    background-image: linear-gradient( rgba(10,7,6, .93), rgba(47,36,28, .93));
     display: flex;
     flex-direction: column;
-    flex: 0 0 20%;
+    align-items: start;
+    flex: 0 0 18%;
     min-height: 100rem;
-
-    &__fixed {
-        position: fixed;
-    }
+    color: $color-grey-dark-2;
+    
 }
+
+
+
 
 .shop-view__container {
 display: flex;

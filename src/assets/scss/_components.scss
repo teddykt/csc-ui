@@ -9,10 +9,7 @@
     }
 }
 
-.header__icon {
-    width:2.5rem;
-    height:2.5rem;
-}
+
 
 ////////////////////////////////////////
 // SEARCH
@@ -28,7 +25,7 @@
         font-family: inherit;
         font-size: inherit;
         color: inherit;
-        background-color: var(--color-light2);
+        background-color: $color-primary-lightest;
         border: none;
         padding: .7rem 2rem;
         border-radius: 100px;
@@ -39,22 +36,22 @@
         &:focus {
             outline: none;
             width: 100%;
-            background-color: var(--color-light3);
+            background-color: $color-primary-light;
         }
 
         &::-webkit-input-placeholder {
             font-weight: 100;
-            color: var(--color-light4);
+            color: $color-grey-dark-2;
         }
     }
 
     &__input:focus + &__button {
-        background-color: var(--color-light3);
+        background-color: $color-primary-light;
     }
 
     &__button {
         border: none;
-        background-color: var(--color-light2);
+        background-color: $color-primary-lightest;
 
         &:focus {
             outline: none;
@@ -68,25 +65,34 @@
     &__icon {
         height: 2rem;
         width: 2rem;
-        fill: var(--color-dark5);
     }
 }
 
 
 /////////////////////////////////////////// navbar
 .type {
-    font-size: 4rem;
+    margin-top: 3.5rem;
+    margin-left: 2.5rem;
+    font-size: 2.5rem;
+    color: $color-primary;
+    font-weight: 300;
+   
 }
 
 .categories {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+
+    &__link{
+        color: $color-primary-nav;
+    }
+    
 }
 
 
 
 /////////////////////////////////////////////  shop-view
-.shop-view {
-    
+.shop-view{
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 5rem;
@@ -94,23 +100,46 @@
     padding: 5rem;
 
     &__each{
-        
+        display: block;
+
         &--img {
-            width: 100%;
+            &-1{
+                display: inline-block; 
+            }
+            &-2{
+                display: none;  
+            }
+        }
+
+        &:hover{
+            .shop-view__each--img-1{
+                display: none;
+            }
+            .shop-view__each--img-2{   
+                display: inline-block;   
+            }
+            .shop-view__detail {
+                transform: scale(1.05);
+                transition: all .1s;
+
+            }
         }
     }
 
     &__detail{
-        
+        color: $color-grey-dark-2;
         display: grid;
-        justify-items: center;
-        
+        justify-items: start;
+        margin-left: 2.4rem;
+        width: 90%;
+
+
         &--price{
           
         }
     
         &--comment {
-            text-align: center;
+    
         }
     }
 

@@ -1,12 +1,33 @@
 :root {
-    --color-light2: #f9f3e4 ;
-    --color-light1: #b09f8f ;
-    --color-primary: #875945;
-    --color-dark1:#3a2626 ;
-    --color-dark2: #1a0c0c ;
-
     --shadow: 0 2rem 6rem rgba(0,0,0,.5);
 }
+// $color-primary: #875945;
+// $color-primary-lightest:#f9f3e4;
+// $color-primary-light:#b09f8f;
+// $color-primary-dark:#3a2626;
+// $color-primary-darkest:#1a0c0c;
+
+
+$color-primary: #a68468;
+$color-primary-lightest:#e8dfd7;
+$color-primary-light:#d2c0b2;
+$color-primary-dark:#795d47;
+$color-primary-darkest:#2f241c;
+
+$color-primary-nav:#bca28d;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+$font-sm: 1.5rem;
+$font-md: 2rem;
+$font-lg: 2.5rem;
 
 * { 
     margin: 0;
@@ -25,9 +46,14 @@ html {
 }
 
 body {
-    font-family :'Nunito', sans-serif;
+    font-family : $font-primary;
     font-weight: 300;
-    color: #f4faf4;
+    color: $color-grey-dark-2;
     line-height: 1.6;
-    background-image: linear-gradient(to right bottom, rgba(214, 200, 122, 0.6), rgba(51, 37, 9, 0.6)), url("assets/img/csc-bg.jpg");
+    background-image: linear-gradient(to right bottom, rgba(54,53,53, 0.6), rgba(37,39,40, 0.6)), url("assets/img/csc-bg.jpg");
+}
+
+a{
+    text-decoration: none;
+    color: $color-grey-dark-2;
 }
