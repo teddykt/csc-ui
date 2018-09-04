@@ -1,30 +1,66 @@
 <div class="shop-main">
-    <nav class="navbar">
-        <div class="type">Antiques
-            <div class="categories">dishes</div>
-            <div class="categories">table</div>
-            <div class="categories">sofa</div>
-        </div>
-        <div class="type">Clothes
-            <div class="categories">shoes</div>
-            <div class="categories">jacket</div>
-            <div class="categories">pants</div>
-        </div>
-    </nav>
+  <nav class="navbar">
+    <div class="type">Antiques
+      <ul class="categories">
+        <li class="categories__item"><a href="#" class="categories__link">Kitchen</a></li>
+        <li class="categories__item"><a href="#" class="categories__link">Sofa</a></li>
+        <li class="categories__item"><a href="#" class="categories__link">Bed</a></li>
+        <li class="categories__item"><a href="#" class="categories__link">Lamps</a></li>
+        <li class="categories__item"><a href="#" class="categories__link">Figures</a></li>
+        <li class="categories__item"><a href="#" class="categories__link">Painting</a></li>
+      </ul>
+    </div>
+    
+    <div class="type">Fashion
+      <ul class="categories">
+        <li class="categories__item"><a href="#" class="categories__link">Dress</a></li>
+        <li class="categories__item"><a href="#" class="categories__link">Top</a></li>
+        <li class="categories__item"><a href="#" class="categories__link">Bottom</a></li>
+        <li class="categories__item"><a href="#" class="categories__link">Accessories</a></li>
+        <li class="categories__item"><a href="#" class="categories__link">Shoes</a></li>
+        <li class="categories__item"><a href="#" class="categories__link">Bag</a></li>
+      </ul>
+    </div>
+    
+    <div class="legal">
+        &copy; 2018 by Christine. All rights reserved. 
+    </div>
+  </nav>
 
-<div class="shop-view__container">
+  
 
-  <div class="shop-view" *ngFor="let price of prices">
-    <a routerLinkActive="active" routerLink="/item">
-      <div class="shop-view__img"><img src="../../assets/logo.png" alt=""></div>
-      
-      <div class="shop-view__detail">
-        <div class="shop-view__name"> Name </div>
-        <div class="shop-view__price"> {{ price }} </div>
-        <div class="shop-view__comment"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, autem. </div>
-        <div class="shop-view__add-to-cart"> <button>add to cart</button>   or  <button>Buy Now!</button></div>
-      </div>
-    </a>
+  <div class="cart-view">
+    <h2 class="heading-secondary">
+        Your Shopping Cart
+    </h2>
+
+    <div class="cart-view__each" *ngFor="let price of prices">
+        <a routerLinkActive="active" routerLink="/item" class="division">
+          <div class="cart-view__each--img"><img src="../../assets/img/frame.png" alt=""></div>
+
+          <div class="division__2">
+          <div class="cart-view__each--name"> Name </div>
+          <div class="cart-view__each--price"> {{ price }} </div>
+          <div class="cart-view__each--comment"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, autem. </div>
+          <div class="cart-view__each--quantity"> Quantity: 1 </div>
+          
+          <button class="btn cart-view__each--btn">
+              <svg class="btn__icon">
+                  <use xlink:href="../assets/img/sprite.svg#.iconnew-message"></use>
+              </svg>
+              change quantity</button>
+          <button class="btn cart-view__each--btn">
+              <svg class="btn__icon">
+                  <use xlink:href="../assets/img/sprite.svg#.iconcup"></use>
+              </svg>
+              remove</button>
+          <button class="btn cart-view__each--btn">
+              <svg class="btn__icon">
+                  <use xlink:href="../assets/img/sprite.svg#.iconcredit"></use>
+              </svg>
+              check out</button>
+            </div>
+        </a>
+      </div> 
   </div>
-</div>
 </div>

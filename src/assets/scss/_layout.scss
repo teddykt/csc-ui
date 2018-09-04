@@ -29,16 +29,19 @@
         display: flex;
         justify-content: space-evenly;
         min-width : 15rem;
+        
     }
 
     &__icon{
         width:2.5rem;
         height:2.5rem;
+        fill: $color-primary-darkest;
     }
     
     &__login{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 8rem);
+        
         
     }
 
@@ -69,3 +72,12 @@ display: flex;
 flex-wrap: wrap;
 padding: 5rem;
 }
+
+.item-view__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    max-width: 80rem;
+}
+
