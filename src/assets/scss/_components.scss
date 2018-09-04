@@ -251,6 +251,8 @@
 
 .heading-secondary{
     font-size: 3.5rem;
+    margin-top: 2.5rem;
+    margin-left: 3.5rem;
     text-transform: uppercase;
     font-weight: 700;
     display: inline-block; 
@@ -258,7 +260,6 @@
     -webkit-background-clip: text; 
     color: transparent; 
     letter-spacing: .2rem;
-    transition: all .2s;
  
 }
 .cart-view{
@@ -268,8 +269,8 @@
         flex-direction: row;
         
         &--img{
-            margin-top: 5rem;
-            width: 20rem;
+            margin-top: 3.5rem;
+            width: 25rem;
         }
         &--name{
             margin-left: 1.5rem;
