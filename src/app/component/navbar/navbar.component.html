@@ -1,7 +1,8 @@
 <nav class="navbar">
-  <div class="type">Antiques
+  <div class="type">
+    <button (click)="onAntiqueClick()"> <a routerLinkActive="active" routerLink="/shop">Antiques</a> </button>
     <ul class="categories">
-      <li class="categories__item"><a href="#" class="categories__link">Kitchen</a></li>
+      <li class="categories__item"><a href="#" class="categories__link" >Kitchen</a></li>
       <li class="categories__item"><a href="#" class="categories__link">Sofa</a></li>
       <li class="categories__item"><a href="#" class="categories__link">Bed</a></li>
       <li class="categories__item"><a href="#" class="categories__link">Lamps</a></li>
@@ -10,7 +11,8 @@
     </ul>
   </div>
   
-  <div class="type">Fashion
+  <div class="type" >
+    <button (click)="onFashionClick()"> <a routerLinkActive="active" routerLink="/home"> Fashion</a> </button>
     <ul class="categories">
       <li class="categories__item"><a href="#" class="categories__link">Dress</a></li>
       <li class="categories__item"><a href="#" class="categories__link">Top</a></li>
