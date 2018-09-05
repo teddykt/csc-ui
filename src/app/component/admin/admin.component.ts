@@ -26,7 +26,7 @@ type: boolean = this.antique(this.item.type);
   };
 
   outer(type: string) {
-    if ((type!=="antique") && (type!=="clothes")) {
+    if ((type!=="antique") && (type!=="fashion")) {
       return false;
     }
     else {

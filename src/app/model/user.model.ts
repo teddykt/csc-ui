@@ -1,3 +1,5 @@
+import { Item } from "./item.model";
+
 export class User {
 
     userId: number;
@@ -7,5 +9,7 @@ export class User {
     lastName: string;
     email: string;
     phone: string;
+    cart: Array<Item>;
+    history: Array<Item>;
     enabled: boolean = true;
 }

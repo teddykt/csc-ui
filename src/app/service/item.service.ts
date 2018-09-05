@@ -13,6 +13,7 @@ export class ItemService {
 
   constructor(private http:HttpClient) {}
 
+  currentItem = 'none';
   private itemUrl = 'http://localhost:8080/items';
 	//private itemUrl = '/api';
 
@@ -27,5 +28,17 @@ export class ItemService {
   public addItem(item) {
     return this.http.post<Item>(this.itemUrl + "/"+ "add", item, { withCredentials: true });
   }
+
+  public findByName(item) {
+    return this.http.get<Item>(this.itemUrl + "item" + item.name,{ withCredentials: true });
+  }
+
+  public getCurrentItem() {
+    return this.currentItem;
+  }
+  public setCurrentItem(item) {
+      this.currentItem = item;
+  }
+    
 
 }

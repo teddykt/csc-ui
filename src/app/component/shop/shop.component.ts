@@ -25,16 +25,19 @@ export class ShopComponent implements OnInit {
   };
 
   onFashionClick(): void {
-    this.type = 'clothes';
+    this.type = 'fashion';
     console.log(this.type);
   };
+
+  onClick(item): void {
+    this.itemService.setCurrentItem(item);
+  }
 
 
   ngOnInit() {
     this.itemService.getItems()
       .subscribe( data => {
         this.items = data;
-        console.log(data);
       });
       this.type = 'all';
   }
