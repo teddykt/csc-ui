@@ -23,7 +23,11 @@ body {
   font-weight: 300;
   color: #6D5D4B;
   line-height: 1.6;
-  background-image: linear-gradient(to right bottom, rgba(54, 53, 53, 0.6), rgba(37, 39, 40, 0.6)), url("assets/img/csc-bg.jpg");
+  background-image: linear-gradient(to right bottom, rgba(47, 36, 28, 0.8), rgba(10, 7, 6, 0.8)), url("assets/img/bg.jpg");
+}
+body ::selection {
+  background-color: #a68468;
+  color: #e8dfd7;
 }
 
 a {
@@ -42,15 +46,22 @@ a {
 .header {
   background-color: #d2c0b2;
   height: 7rem;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 5rem 30rem 50rem 30rem 10rem;
   align-items: center;
 }
-.header__items {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  min-width: 30rem;
+.header__logo {
+  width: 5rem;
+  height: 5rem;
+  margin-left: 2rem;
+}
+.header__shop {
+  margin-left: 3.5rem;
+}
+.header__login {
+  display: grid;
+  grid-template-columns: repeat(2, 6rem);
+  justify-content: end;
 }
 .header__icons {
   display: flex;
@@ -61,14 +72,6 @@ a {
   width: 2.5rem;
   height: 2.5rem;
   fill: #2f241c;
-}
-.header__login {
-  display: grid;
-  grid-template-columns: repeat(2, 8rem);
-}
-.header__logo {
-  width: 5rem;
-  height: 5rem;
 }
 
 .navbar {
@@ -95,6 +98,21 @@ a {
   max-width: 80rem;
 }
 
+.shop-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+}
+
+.shop-main {
+  display: flex;
+}
+
+.cart-main {
+  display: flex;
+  width: 100%;
+}
+
 .logo {
   height: 4rem;
 }
@@ -102,6 +120,30 @@ a {
 .user-nav__icon {
   width: 2.5rem;
   height: 2.5rem;
+}
+
+.home-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100rem;
+  background-image: linear-gradient(to right bottom, rgba(47, 36, 28, 0.9), rgba(47, 36, 28, 0.9)), url("assets/img/home-bg.png");
+  background-size: cover;
+}
+.home-view .chandelier {
+  width: 50rem;
+}
+.home-view .chandelier__on {
+  display: none;
+}
+.home-view .chandelier__off {
+  display: inline-block;
+}
+.home-view .chandelier:hover .chandelier__on, .home-view .chandelier:active .chandelier__on {
+  display: inline-block;
+}
+.home-view .chandelier:hover .chandelier__off, .home-view .chandelier:active .chandelier__off {
+  display: none;
 }
 
 .search {
@@ -149,17 +191,26 @@ a {
   width: 2rem;
 }
 
+@font-face {
+  font-family: "Pinyon";
+  src: url("assets/PinyonScript-Regular.ttf");
+}
 .type {
   margin-top: 3.5rem;
   margin-left: 2.5rem;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: #a68468;
   font-weight: 300;
+  font-family: "Pinyon";
+}
+.type__link {
+  color: #d2c0b2;
 }
 
 .categories {
   font-size: 1.5rem;
   text-decoration: none;
+  font-family: "Nunito", sans-serif;
 }
 .categories__link {
   color: #bca28d;
@@ -170,17 +221,20 @@ a {
   color: #a68468;
   position: fixed;
   bottom: 0;
+  margin-left: 0.5rem;
+}
+
+.shop-category {
+  margin-top: 1rem;
+  margin-left: 2.5rem;
 }
 
 .shop-view {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-row-gap: 5rem;
-  grid-column-gap: 7rem;
-  padding: 5rem;
-}
-.shop-view__each {
-  display: block;
+  grid-column-gap: 5rem;
+  padding: 2rem 5rem;
 }
 .shop-view__each--img-1 {
   display: inline-block;
@@ -205,10 +259,6 @@ a {
   margin-left: 2.4rem;
   width: 90%;
 }
-.shop-main {
-  display: flex;
-}
-
 .item-view {
   display: grid;
   grid-template-columns: 50rem repeat(1, 37rem);
@@ -220,7 +270,7 @@ a {
   width: 100%;
 }
 .item-view__detail {
-  margin-top: 5rem;
+  margin-top: 3.5rem;
   padding: 2rem;
 }
 .item-view__detail--name {
@@ -245,6 +295,7 @@ a {
 }
 .item-view__detail--btn {
   margin-top: 1.5rem;
+  width: 20.5rem;
 }
 
 .btn {
@@ -255,7 +306,7 @@ a {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
   text-transform: uppercase;
-  padding: 1.5rem 3rem;
+  padding: 1.7rem 3rem;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -305,6 +356,29 @@ a {
 .cart-view__each--btn {
   margin-top: 1rem;
   margin-left: 1rem;
+  font-size: 1.2rem;
+  padding: 1rem 1.7rem 1.5rem 1.7rem;
+}
+.cart-view__total {
+  width: 130%;
+  border-top: solid #795d47 1px;
+  text-align: end;
+  margin-top: 2.5rem;
+  font-size: 1.9rem;
+}
+.cart-view__btn {
+  width: 135%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+.cart-view__btn--btn {
+  padding: 2rem 2.5rem;
+  margin: 1rem;
+  background-color: #544131;
+}
+.cart-view__btn--btn:hover, .cart-view__btn--btn:link {
+  background-color: #795d47;
 }
 
 .division {

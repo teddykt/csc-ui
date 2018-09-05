@@ -22,6 +22,9 @@ $color-grey-light-2: #aaa;
 $color-grey-dark-1: #54483A;
 $color-grey-dark-2: #6D5D4B;
 
+$color-black: black;
+$color-white: white;
+
 $font-primary: 'Nunito', sans-serif;
 $font-display: 'Josefin Sans', sans-serif;
 
@@ -50,7 +53,12 @@ body {
     font-weight: 300;
     color: $color-grey-dark-2;
     line-height: 1.6;
-    background-image: linear-gradient(to right bottom, rgba(54,53,53, 0.6), rgba(37,39,40, 0.6)), url("assets/img/csc-bg.jpg");
+    background-image: linear-gradient(to right bottom, rgba(47,36,28, 0.8), rgba(10,7,6, 0.8)), url("assets/img/bg.jpg");
+
+    ::selection{
+        background-color: $color-primary; 
+        color: $color-primary-lightest;
+    }
 }
 
 a{
