@@ -1,11 +1,14 @@
 
     <header class="header">
             
-        <div class="header__logo">
-            <a routerLinkActive="active" routerLink="/home"> <img src="../assets/chandelier.png" alt="logo" class ="logo"> </a>
-        </div>
-        <div class="header__shop">
-                <a routerLinkActive="active" routerLink="/shop"> Shop </a>
+        <div class="header__items">
+            <div class="header__logo">
+                <a routerLinkActive="active" routerLink="/home"> <img src="../assets/chandelier.png" alt="logo" class ="logo"> </a>
+            </div>
+            <a routerLinkActive="active" routerLink="/admin"> Admin</a>
+            <a routerLinkActive="active" routerLink="/info">Contact Us</a>
+            <a routerLinkActive="active" routerLink="/shop" (click)="onAntiqueClick()">Shop</a>
+      
         </div>
 
         <div class="header__search">

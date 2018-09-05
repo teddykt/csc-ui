@@ -4,18 +4,21 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpInterceptor, HttpRequest, HttpHandler, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './component/home/home.component';
 
 import { RouterModule, Routes } from '@angular/router';
-import { ShopComponent } from './shop/shop.component';
-import { CartComponent } from './cart/cart.component';
-import { ItemComponent } from './item/item.component';
-import { InfoComponent } from './info/info.component';
+import { ShopComponent } from './component/shop/shop.component';
+import { CartComponent } from './component/cart/cart.component';
+import { ItemComponent } from './component/item/item.component';
+import { InfoComponent } from './component/info/info.component';
 import { AppService } from './service/app.service';
 import { UserService } from './service/user.service';
 import { ItemService } from './service/item.service';
-import { AdminComponent } from './admin/admin.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { AdminComponent } from './component/admin/admin.component';
+import { NavbarComponent } from './component/navbar/navbar.component';
+import { ItemFilterPipe } from './item-filter.pipe';
+import { ProfileComponent } from './component/profile/profile.component';
+import { HistoryComponent } from './component/history/history.component';
 
 // import { AuthService } from './auth.service';
 
@@ -50,7 +53,10 @@ const routes: Routes = [
     ItemComponent,
     InfoComponent,
     AdminComponent,
-    NavbarComponent
+    NavbarComponent,
+    ItemFilterPipe,
+    ProfileComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
