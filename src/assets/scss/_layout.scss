@@ -10,20 +10,30 @@
     background-color:  $color-primary-light;
     height: 7rem;
 
-    display:flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 5rem 30rem 50rem 30rem 10rem;
     align-items: center;
 
-    &__items {
-        
-        display:flex;
-        align-items: center;
-        justify-content: space-around;
-        min-width: 30rem;
-        
+    &__logo{
+        width: 5rem;
+        height: 5rem;
+        margin-left: 2rem; 
+    }
+
+    &__shop{
+        margin-left: 3.5rem;
+    }
+    &__search{
         
     }
 
+    &__login{
+        display: grid;
+        grid-template-columns: repeat(2, 6rem);
+        justify-content: end;
+
+        
+    }
 
     &__icons {
         display: flex;
@@ -37,18 +47,7 @@
         height:2.5rem;
         fill: $color-primary-darkest;
     }
-    
-    &__login{
-        display: grid;
-        grid-template-columns: repeat(2, 8rem);
-        
-        
-    }
 
-    &__logo{
-        width: 5rem;
-        height: 5rem;
-    }
 }
 
 
@@ -81,3 +80,19 @@ padding: 5rem;
     max-width: 80rem;
 }
 
+.shop-container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+
+.shop-main {
+    display:flex;
+
+}
+
+.cart-main {
+    display:flex;
+    width: 100%;
+
+}

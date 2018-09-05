@@ -1,6 +1,6 @@
 <div class="shop-main">
   <nav class="navbar">
-      <div class="type">Antiques
+      <div class="type"><a href="#" class="type__link">Antiques</a>
         <ul class="categories">
           <li class="categories__item"><a href="#" class="categories__link">Kitchen</a></li>
           <li class="categories__item"><a href="#" class="categories__link">Sofa</a></li>
@@ -11,7 +11,7 @@
         </ul>
       </div>
       
-      <div class="type">Fashion
+      <div class="type"><a href="#" class="type__link">Fashion</a>
         <ul class="categories">
           <li class="categories__item"><a href="#" class="categories__link">Dress</a></li>
           <li class="categories__item"><a href="#" class="categories__link">Top</a></li>
@@ -23,23 +23,27 @@
       </div>
       
       <div class="legal">
-          &copy; 2018 by Christine. All rights reserved. 
+          &copy; 2018 ON by Ted K and Christine L<br> All rights reserved. 
       </div>
     </nav>
-
-  <div class="shop-view">
-
-    <div class="shop-view__each" *ngFor="let price of prices">
-      <a routerLinkActive="active" routerLink="/item">
-        <div class="shop-view__each--img-1"><img src="../../assets/img/frame.png" alt=""></div>
-        <div class="shop-view__each--img-2"><img src="../../assets/img/frame-2.png" alt=""></div>
-        
-        <div class="shop-view__detail">
-          <div class="shop-view__detail--name"> Name </div>
-          <div class="shop-view__detail--comment"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, autem. </div>
-          <div class="shop-view__detail--price"> {{ price }} </div>
-        </div>
-      </a>
+  
+  <div class="shop-container">
+    <div class="shop-category">Home / All</div>
+  
+    <div class="shop-view">
+      
+      <div class="shop-view__each" *ngFor="let price of prices">
+        <a routerLinkActive="active" routerLink="/item">
+          <div class="shop-view__each--img-1"><img src="../../assets/img/frame.png" alt=""></div>
+          <div class="shop-view__each--img-2"><img src="../../assets/img/frame-2.png" alt=""></div>
+          
+          <div class="shop-view__detail">
+            <div class="shop-view__detail--name"> Name </div>
+            <div class="shop-view__detail--comment"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, autem. </div>
+            <div class="shop-view__detail--price"> {{ price }} </div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
