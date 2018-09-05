@@ -81,6 +81,7 @@ a {
   align-items: start;
   flex: 0 0 18%;
   min-height: 100rem;
+  min-width: 25rem;
   color: #6D5D4B;
 }
 
@@ -198,13 +199,20 @@ a {
 .type {
   margin-top: 3.5rem;
   margin-left: 2.5rem;
+}
+.type__link {
+  color: #d2c0b2;
+}
+.type__btn {
   font-size: 3.5rem;
   color: #a68468;
   font-weight: 300;
   font-family: "Pinyon";
+  background-color: transparent;
+  border: none;
 }
-.type__link {
-  color: #d2c0b2;
+.type__btn:active {
+  border: none;
 }
 
 .categories {

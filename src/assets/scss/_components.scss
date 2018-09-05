@@ -117,14 +117,23 @@
 .type {
     margin-top: 3.5rem;
     margin-left: 2.5rem;
-    font-size: 3.5rem;
-    color: $color-primary;
-    font-weight: 300;
-    font-family: "Pinyon";
 
 
     &__link{
         color: $color-primary-light;
+    }
+
+    &__btn{
+        font-size: 3.5rem;
+        color: $color-primary;
+        font-weight: 300;
+        font-family: "Pinyon";
+        background-color: transparent;
+        border: none;
+        
+        &:active{
+            border: none;
+        }
     }
    
 }
