@@ -10,3 +10,40 @@
         </div>
     </div>
 </div>
+<div><a routerLinkActive="active" routerLink="/shop">Start Shopping</a></div>
+
+
+<form>
+	<div class="form-group">
+		<label for="name">email</label>
+		<input type="text" [(ngModel)]="user.email" placeholder="Email" name="email" class="form-control" id="email">
+	</div>
+
+		<label for="name">username</label>
+		<input type="text" [(ngModel)]="user.username" name="username">
+		<label for="name">password</label>
+		<input type="text" [(ngModel)]="user.password" name="password">
+
+		<label for="name">phone</label>
+		<input type="text" [(ngModel)]="user.phone" name="phone">
+		<label for="name">lastName</label>
+		<input type="text" [(ngModel)]="user.lastName" name="lastName">
+		<label for="name">firstName</label>
+		<input type="text" [(ngModel)]="user.firstName" name="firstName">
+
+		<button class="btn btn-success" (click)="createUser()">Create</button>
+</form>
+
+
+
+
+<form>
+
+		<label for="name">username</label>
+		<input type="text" [(ngModel)]="user.username" name="username">
+		<label for="name">password</label>
+		<input type="text" [(ngModel)]="user.password" name="password">
+
+
+		<button class="btn btn-success" (click)="logIn()">Log In</button>
+</form>

@@ -1,49 +1,20 @@
 <div class="shop-main">
-  <nav class="navbar">
-      <div class="type"><a href="#" class="type__link">Antiques</a>
-        <ul class="categories">
-          <li class="categories__item"><a href="#" class="categories__link">Kitchen</a></li>
-          <li class="categories__item"><a href="#" class="categories__link">Sofa</a></li>
-          <li class="categories__item"><a href="#" class="categories__link">Bed</a></li>
-          <li class="categories__item"><a href="#" class="categories__link">Lamps</a></li>
-          <li class="categories__item"><a href="#" class="categories__link">Figures</a></li>
-          <li class="categories__item"><a href="#" class="categories__link">Painting</a></li>
-        </ul>
-      </div>
-      
-      <div class="type"><a href="#" class="type__link">Fashion</a>
-        <ul class="categories">
-          <li class="categories__item"><a href="#" class="categories__link">Dress</a></li>
-          <li class="categories__item"><a href="#" class="categories__link">Top</a></li>
-          <li class="categories__item"><a href="#" class="categories__link">Bottom</a></li>
-          <li class="categories__item"><a href="#" class="categories__link">Accessories</a></li>
-          <li class="categories__item"><a href="#" class="categories__link">Shoes</a></li>
-          <li class="categories__item"><a href="#" class="categories__link">Bag</a></li>
-        </ul>
-      </div>
-      
-      <div class="legal">
-          &copy; 2018 ON by Ted K and Christine L<br> All rights reserved. 
-      </div>
-    </nav>
-  
-  <div class="shop-container">
-    <div class="shop-category">Home / All</div>
-  
-    <div class="shop-view">
-      
-      <div class="shop-view__each" *ngFor="let price of prices">
-        <a routerLinkActive="active" routerLink="/item">
-          <div class="shop-view__each--img-1"><img src="../../assets/img/frame.png" alt=""></div>
-          <div class="shop-view__each--img-2"><img src="../../assets/img/frame-2.png" alt=""></div>
-          
-          <div class="shop-view__detail">
-            <div class="shop-view__detail--name"> Name </div>
-            <div class="shop-view__detail--comment"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, autem. </div>
-            <div class="shop-view__detail--price"> {{ price }} </div>
-          </div>
-        </a>
-      </div>
+  <app-navbar></app-navbar>
+
+  <div class="shop-view">
+
+    <div class="shop-view__each" *ngFor="let item of items">
+      <a routerLinkActive="active" routerLink="/item">
+        <div class="shop-view__each--img-1"><img src="../../assets/img/frame.png" alt=""></div>
+        <div class="shop-view__each--img-2"><img src="../../assets/img/frame-2.png" alt=""></div>
+        
+        <div class="shop-view__detail">
+          <div class="shop-view__detail--name"> {{ item.name }} </div>
+          <div class="shop-view__detail--comment"> {{ item.detail}} </div>
+          <div class="shop-view__detail--price"> {{ item.price }} </div>
+          <div class="shop-view__detail--category"> {{ item.category }} </div>
+        </div>
+      </a>
     </div>
   </div>
 </div>

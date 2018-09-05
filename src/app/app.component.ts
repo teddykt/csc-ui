@@ -6,4 +6,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  static API_URL="http://localhost:8080";
 }
