@@ -81,6 +81,7 @@ a {
   align-items: start;
   flex: 0 0 18%;
   min-height: 100rem;
+  min-width: 25rem;
   color: #6D5D4B;
 }
 
@@ -131,7 +132,7 @@ a {
   background-size: cover;
 }
 .home-view .chandelier {
-  width: 50rem;
+  width: 45rem;
 }
 .home-view .chandelier__on {
   display: none;
@@ -198,18 +199,27 @@ a {
 .type {
   margin-top: 3.5rem;
   margin-left: 2.5rem;
+}
+.type__btn {
   font-size: 3.5rem;
-  color: #a68468;
+  color: #d2c0b2;
   font-weight: 300;
   font-family: "Pinyon";
+  background-color: transparent;
+  border: none;
+  transition: all 0.2s;
 }
-.type__link {
-  color: #d2c0b2;
+.type__btn:hover {
+  transform: scale(1.1);
+}
+.type__btn:active, .type__btn:focus {
+  outline: 0 !important;
 }
 
 .categories {
   font-size: 1.5rem;
   text-decoration: none;
+  margin-top: 0.5rem;
   font-family: "Nunito", sans-serif;
 }
 .categories__link {

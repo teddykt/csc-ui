@@ -1,15 +1,12 @@
 
     <header class="header">
-            
-        <div class="header__items">
             <div class="header__logo">
                 <a routerLinkActive="active" routerLink="/home"> <img src="../assets/chandelier.png" alt="logo" class ="logo"> </a>
             </div>
-            <a routerLinkActive="active" routerLink="/admin"> Admin</a>
-            <a routerLinkActive="active" routerLink="/info">Contact Us</a>
+            <div class="header__shop">
             <a routerLinkActive="active" routerLink="/shop" (click)="onAntiqueClick()">Shop</a>
-      
-        </div>
+            </div>
+        
 
         <div class="header__search">
         <form action="#" class="search">
@@ -26,8 +23,8 @@
             <div><a href="home#0" data-signin="login">Sign in</a></div>
             <div><a href="home#0" data-signin="signup">Sign up</a></div>
         </div>
+
         <div class="header__icons">
-            
             <div class="header__icons-box dropdown">
                 <svg class="header__icon dropbtn">
                     <use xlink:href="../assets/img/sprite.svg#icon-user1"></use>

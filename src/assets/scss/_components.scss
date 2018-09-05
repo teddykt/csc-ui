@@ -21,7 +21,7 @@
     background-size: cover;
 
     .chandelier{
-        width: 50rem;
+        width: 45rem;
         &__on{
             display: none;
         }
@@ -117,14 +117,25 @@
 .type {
     margin-top: 3.5rem;
     margin-left: 2.5rem;
-    font-size: 3.5rem;
-    color: $color-primary;
-    font-weight: 300;
-    font-family: "Pinyon";
 
-
-    &__link{
+    &__btn{
+        font-size: 3.5rem;
         color: $color-primary-light;
+        font-weight: 300;
+        font-family: "Pinyon";
+        background-color: transparent;
+        border: none;
+        transition: all .2s;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+        
+        
+        &:active,
+        &:focus{
+           outline: 0 !important;
+        }
     }
    
 }
@@ -132,10 +143,12 @@
 .categories {
     font-size: 1.5rem;
     text-decoration: none;
+    margin-top: 0.5rem;
     font-family: $font-primary;
 
     &__link{
         color: $color-primary-nav;
+
     }
     
 }
