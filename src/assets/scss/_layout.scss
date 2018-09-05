@@ -50,9 +50,7 @@
 
 }
 
-
-.navbar {
-    
+.navbar{
     background-image: linear-gradient( rgba(10,7,6, .93), rgba(47,36,28, .93));
     display: flex;
     flex-direction: column;
@@ -60,11 +58,7 @@
     flex: 0 0 18%;
     min-height: 100rem;
     color: $color-grey-dark-2;
-    
 }
-
-
-
 
 .shop-view__container {
 display: flex;
