@@ -40,6 +40,7 @@ const routes: Routes = [
   { path: 'item', component: ItemComponent},
   { path: 'info', component: InfoComponent},
   { path: 'admin', component: AdminComponent},
+  { path: 'profile', component: ProfileComponent},
   { path: '', pathMatch: 'full', redirectTo: 'home'}
 
 ];

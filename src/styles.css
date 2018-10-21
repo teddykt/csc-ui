@@ -197,7 +197,7 @@ a {
   src: url("assets/PinyonScript-Regular.ttf");
 }
 .type {
-  margin-top: 3.5rem;
+  margin-top: 3rem;
   margin-left: 2.5rem;
 }
 .type__btn {
@@ -348,16 +348,19 @@ a {
   flex-direction: row;
 }
 .cart-view__each--img {
-  margin-top: 3.5rem;
+  margin-top: 3rem;
   width: 25rem;
 }
 .cart-view__each--name {
+  font-size: 1.9rem;
   margin-left: 1.5rem;
 }
 .cart-view__each--price {
+  font-weight: bold;
   margin-left: 1.5rem;
 }
 .cart-view__each--comment {
+  font-size: 1.4rem;
   margin-left: 1.5rem;
 }
 .cart-view__each--quantity {
@@ -370,7 +373,7 @@ a {
   padding: 1rem 1.7rem 1.5rem 1.7rem;
 }
 .cart-view__total {
-  width: 130%;
+  width: 135%;
   border-top: solid #795d47 1px;
   text-align: end;
   margin-top: 2.5rem;

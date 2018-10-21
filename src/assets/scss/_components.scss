@@ -115,7 +115,7 @@
 }
 
 .type {
-    margin-top: 3.5rem;
+    margin-top: 3rem;
     margin-left: 2.5rem;
 
     &__btn{
@@ -336,18 +336,21 @@
         flex-direction: row;
         
         &--img{
-            margin-top: 3.5rem;
+            margin-top: 3rem;
             width: 25rem;
         }
         &--name{
+            font-size: $font-md;
             margin-left: 1.5rem;
 
         }
         &--price{
+            font-weight: bold;
             margin-left: 1.5rem;
         }
     
         &--comment {
+            font-size: $font-sm;
             margin-left: 1.5rem;
         }
 
@@ -364,7 +367,7 @@
     }
 
     &__total{
-        width: 130%;
+        width: 135%;
         border-top: solid $color-primary-dark 1px;
         text-align: end;
         margin-top: 2.5rem;
