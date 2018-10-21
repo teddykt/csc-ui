@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ItemService } from '../../service/item.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,23 +8,19 @@ import { Observable } from 'rxjs';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-//   static type: string;
-//   type: string = 'antique';
-//   static getType() {
-//     return this.type;
-// }
-  
-//   onAntiqueClick(): void {
-//     this.type = 'antique';
-//     console.log(this.type);
-//   };
+  type: string;
 
-//   onFashionClick(): void {
-//     this.type = 'fashion';
-//     console.log(this.type);
-//   };
+  ////////////////////navbar
+  onAntiqueClick(): void {
+    this.itemService.setLocation('antique');
+    // this.type = this.itemService.getLocation();
+  };
 
-  constructor() { }
+  onFashionClick(): void {
+    this.itemService.setLocation('fashion');
+    // this.type = this.itemService.getLocation();
+  };
+  constructor(private itemService: ItemService) { }
 
   ngOnInit() {
   }

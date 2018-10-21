@@ -1,6 +1,6 @@
 export class Item {
 
-    iid: number;
+    id: number;
     name: string;
     price: number;
     detail: string;

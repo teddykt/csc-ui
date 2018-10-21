@@ -25,8 +25,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": ["src/assets/ss-css/ssmain.js",
-            "src/assets/ss-css/placeholders.min.js"]
+            "scripts": []
           },
           "configurations": {
             "production": {

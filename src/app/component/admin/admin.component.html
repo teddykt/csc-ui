@@ -11,12 +11,11 @@ add Item
 		<input type="text" [(ngModel)]="item.detail" name="detail">
 		<label for="name">quantity</label>
     <input type="text" [(ngModel)]="item.quantity" name="quantity">
-
     <br>
 
 		<label for="name">type</label>
     <input type="radio" [(ngModel)]="item.type" name="type" value="antique"> Antique
-    <input type="radio" [(ngModel)]="item.type" name="type" value="fashion" checked="checked" > fashion
+    <input type="radio" [(ngModel)]="item.type" name="type" value="fashion" > fashion
 
     <br>
  
@@ -27,7 +26,7 @@ add Item
         <input type="radio" [(ngModel)]="item.category" name="kitchen" value="kitchen"> kitchen <br>
         <input type="radio" [(ngModel)]="item.category" name="sofa" value="sofa"> sofa<br>
         <input type="radio" [(ngModel)]="item.category" name="lamp" value="lamp"> lamp <br>
-        <input type="radio" [(ngModel)]="item.category" name="shoes" value="shoes"> shoes<br>  
+        <input type="radio" [(ngModel)]="item.category" name="painting" value="painting"> painting<br>  
       </div>
 
       <div *ngIf="!antique(item.type)"> 

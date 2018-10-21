@@ -1,26 +1,32 @@
 <div class="shop-main">
     <nav class="navbar">
         <div class="type">
-          <button (click)="onAntiqueClick()" class="type__btn"> Antiques </button>
+          
+          <button class="type__btn">  
+            <a routerLinkActive="active" routerLink="/shop/antique" >Antiques</a>
+          </button>
           <ul class="categories">
-            <li class="categories__item"><a href="#" class="categories__link" >Kitchen</a></li>
-            <li class="categories__item"><a href="#" class="categories__link">Sofa</a></li>
-            <li class="categories__item"><a href="#" class="categories__link">Bed</a></li>
-            <li class="categories__item"><a href="#" class="categories__link">Lamps</a></li>
-            <li class="categories__item"><a href="#" class="categories__link">Figures</a></li>
-            <li class="categories__item"><a href="#" class="categories__link">Painting</a></li>
+            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/kitchen" class="categories__link" >Kitchen</a></li>
+            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/sofa" class="categories__link">Sofa</a></li>
+            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/bed" class="categories__link">Bed</a></li>
+            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/lamp" class="categories__link">Lamps</a></li>
+            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/figures" class="categories__link">Figures</a></li>
+            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/painting" class="categories__link">Painting</a></li>
           </ul>
         </div>
         
         <div class="type" >
-          <button (click)="onFashionClick()" class="type__btn"> Fashion </button>
+
+          <button class="type__btn">  
+            <a routerLinkActive="active" routerLink="/shop/fashion" >Fashion</a>
+          </button>
           <ul class="categories">
-            <li class="categories__item"><a href="#" class="categories__link">Dress</a></li>
-            <li class="categories__item"><a href="#" class="categories__link">Top</a></li>
-            <li class="categories__item"><a href="#" class="categories__link">Bottom</a></li>
-            <li class="categories__item"><a href="#" class="categories__link">Accessories</a></li>
-            <li class="categories__item"><a href="#" class="categories__link">Shoes</a></li>
-            <li class="categories__item"><a href="#" class="categories__link">Bag</a></li>
+            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/dress" class="categories__link">Dress</a></li>
+            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/top" class="categories__link">Top</a></li>
+            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/bottom" class="categories__link">Bottom</a></li>
+            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/accessories" class="categories__link">Accessories</a></li>
+            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/shoes" class="categories__link">Shoes</a></li>
+            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/bag" class="categories__link">Bag</a></li>
           </ul>
         </div>
         
@@ -31,10 +37,10 @@
 
   <div class="shop-view">
      {{ type }}
-    <div class="shop-view__each" *ngFor="let item of items | itemFilter: type || 'all' ">
-      <a routerLinkActive="active" routerLink="/item">
-        <div class="shop-view__each--img-1"><img src="../../assets/img/frame.png" alt=""></div>
-        <div class="shop-view__each--img-2"><img src="../../assets/img/frame-2.png" alt=""></div>
+    <div class="shop-view__each" *ngFor="let item of items | itemFilter: type">
+      <a routerLinkActive="active" routerLink="/item" (click) = "onClick(item)">
+        <div class="shop-view__each--img-1"><img src="assets/img/frame.png" alt=""></div>
+        <div class="shop-view__each--img-2"><img src="assets/img/frame-2.png" alt=""></div>
         
         <div class="shop-view__detail">
           <div class="shop-view__detail--name"> {{ item.name }} </div>
