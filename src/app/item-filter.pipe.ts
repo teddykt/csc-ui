@@ -10,8 +10,11 @@ export class ItemFilterPipe implements PipeTransform {
         if (filterType == 'all') {
             return items;
         }
-        else {
+        else if ((filterType == 'antique') || (filterType == 'fashion')) {
             return items.filter(item => item.type == filterType);
+        }
+        else {
+            return items.filter(item => item.category == filterType);
         }
         // return items.filterType(item => item.type.indexOf(filterType) !== -1);
     }

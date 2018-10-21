@@ -1,33 +1,32 @@
 
     <header class="header">
-            <div class="header__logo">
-                <a routerLinkActive="active" routerLink="/home"> <img src="../assets/chandelier.png" alt="logo" class ="logo"> </a>
-            </div>
+            <a class="header__logo" routerLinkActive="active" routerLink="/home"> <img src="../assets/chandelier-off.png" alt="logo" class ="logo"> </a>
             <div class="header__shop">
-            <a routerLinkActive="active" routerLink="/shop" (click)="onAntiqueClick()">Shop</a>
+                    <a routerLinkActive="active" routerLink="/shop" >Shop</a>
+                    <a routerLinkActive="active" routerLink="/admin">Shop</a>
             </div>
         
 
         <div class="header__search">
-        <form action="#" class="search">
-            <input type="text" class="search__input" placeholder="Search">
-            <button class="search__button">
-                <svg class="search__icon">
-                    <use xlink:href="../assets/img/sprite.svg#icon-search"></use>
-                </svg>
-            </button>
-        </form>
+            <form action="#" class="search">
+                <input type="text" class="search__input" placeholder="Search">
+                <button class="search__button">
+                    <svg class="search__icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-search"></use>
+                    </svg>
+                </button>
+            </form>
         </div>
 
-        <div class="js-signin-modal-trigger header__login">
-            <div><a href="home#0" data-signin="login">Sign in</a></div>
-            <div><a href="home#0" data-signin="signup">Sign up</a></div>
+        <div class="header__login">
+            <a routerLinkActive="active" routerLink="/signin"> Sign In </a>
+            <a routerLinkActive="active" routerLink="/signup"> Sign Up</a>
         </div>
 
-        <div class="header__icons">
+        <div class="header__icons" [hidden]="!loggedIn">
             <div class="header__icons-box dropdown">
                 <svg class="header__icon dropbtn">
-                    <use xlink:href="../assets/img/sprite.svg#icon-user1"></use>
+                    <use xlink:href="assets/img/sprite.svg#icon-user1"></use>
                 </svg>
                 <div class="dropdown-content">
                     <a routerLinkActive="active" routerLink="/myProfile">My profile</a>
@@ -40,7 +39,7 @@
             <a routerLinkActive="active" routerLink="/cart">
               <div class="header__icons-box">
                   <svg class="header__icon">
-                      <use xlink:href="../assets/img/sprite.svg#icon-cart"></use>
+                      <use xlink:href="assets/img/sprite.svg#icon-cart"></use>
                   </svg>
               </div>
             </a>
@@ -48,6 +47,5 @@
         </div>
 
     </header>
-<router-outlet></router-outlet>
 
- 
+<router-outlet></router-outlet>

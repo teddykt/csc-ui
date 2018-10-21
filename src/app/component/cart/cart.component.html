@@ -8,44 +8,47 @@
     <h2 class="heading-secondary">
         Your Shopping Cart
     </h2>
-
-    <div class="cart-view__each" *ngFor="let price of prices">
+    <div class="cart-view__each" *ngFor="let cartItem of currentCart.cartItem">
         <a routerLinkActive="active" routerLink="/item" class="division">
-          <div class="cart-view__each--img"><img src="../../assets/img/frame.png" alt=""></div>
-
+          <div class="cart-view__each--img"><img src="assets/img/frame.png" alt=""></div>
           <div class="division__2">
-          <div class="cart-view__each--name"> Name </div>
-          <div class="cart-view__each--price"> {{ price }} </div>
-          <div class="cart-view__each--comment"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, autem. </div>
-          <div class="cart-view__each--quantity"> Quantity: 1 </div>
+          <div class="cart-view__each--name"> {{ cart.item.name}} </div>
+          <div class="cart-view__each--price"> {{ cart.item.price }} </div>
+          <div class="cart-view__each--comment"> {{ cart.item.detail }} </div>
+          <div class="cart-view__each--quantity"> {{ cart.item.quantity }} </div>
+          <div class="cart-view__each--quantity"> {{ cart.item.id }} </div>
           
-          <button class="btn cart-view__each--btn">
-              <svg class="btn__icon">
-                  <use xlink:href="../assets/img/sprite.svg#.iconnew-message"></use>
-              </svg>
-              change quantity</button>
-          <button class="btn cart-view__each--btn">
-              <svg class="btn__icon">
-                  <use xlink:href="../assets/img/sprite.svg#.iconcup"></use>
-              </svg>
-              remove</button>
+
             </div>
         </a>
+          <button class="btn cart-view__each--btn" >
+              <svg class="btn__icon">
+                  <use xlink:href="assets/img/sprite.svg#.iconnew-message"></use>
+              </svg>
+              change quantity</button>
+          <button class="btn cart-view__each--btn" (click)="remove( cart )">
+              <svg class="btn__icon">
+                  <use xlink:href="assets/img/sprite.svg#.iconcup"></use>
+              </svg>
+              remove</button>
+
+
       </div> 
 
     <div class="cart-view__total">
-      Sub Total $
+      Grand Total $  {{currentCart.grandTotal}}
     </div>
+   
 
     <div class="cart-view__btn">
         <button class="btn cart-view__btn--btn"> 
             <svg class="btn__icon">
-                <use xlink:href="../assets/img/sprite.svg#.iconback"></use>
+                <use xlink:href="assets/img/sprite.svg#.iconback"></use>
             </svg>
             Back to Shop </button> 
         <button class="btn cart-view__btn--btn">
             <svg class="btn__icon">
-                <use xlink:href="../assets/img/sprite.svg#.iconcredit"></use>
+                <use xlink:href="assets/img/sprite.svg#.iconcredit"></use>
             </svg>
             check out</button>
     </div>

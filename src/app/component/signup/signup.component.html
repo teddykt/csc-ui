@@ -1,0 +1,25 @@
+<div class="home-view">
+  <form>
+
+
+      <label for="username">username</label>
+      <input type="text" [(ngModel)]="user.username" name="username">
+
+      <label for="email">email</label>
+      <input type="text" [(ngModel)]="user.email" placeholder="Email" name="email" class="form-control" id="email">
+
+      <label for="password">password</label>
+      <input type="text" [(ngModel)]="user.password" name="password">
+
+      <label for="phone">phone</label>
+      <input type="text" [(ngModel)]="user.phone" name="phone">
+
+      <label for="lastName">lastName</label>
+      <input type="text" [(ngModel)]="user.lastName" name="lastName">
+
+      <label for="firstName">firstName</label>
+      <input type="text" [(ngModel)]="user.firstName" name="firstName">
+
+      <button class="btn btn-success" (click)="createUser()">Create</button>
+  </form>
+</div>

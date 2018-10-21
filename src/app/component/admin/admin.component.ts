@@ -20,7 +20,7 @@ type: boolean = this.antique(this.item.type);
   addItem(): void {
     this.itemService.addItem(this.item)
         .subscribe( data => {
-          alert("User created successfully.");
+          alert("Item added successfully.");
         });
 
   };

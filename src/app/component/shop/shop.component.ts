@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ItemService } from '../../service/item.service';
 import { Item } from '../../model/item.model';
 import { NavbarComponent } from '../navbar/navbar.component';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-shop',
@@ -13,33 +14,28 @@ export class ShopComponent implements OnInit {
   type: string;
   
 
-  constructor(private itemService: ItemService) { }
-  
-  @ViewChild(NavbarComponent) child;
+  constructor(private route: ActivatedRoute, private itemService: ItemService) { }
 
 
-  ////////////////////navbar
-  onAntiqueClick(): void {
-    this.type = 'antique';
-    console.log(this.type);
-  };
 
-  onFashionClick(): void {
-    this.type = 'fashion';
-    console.log(this.type);
-  };
 
   onClick(item): void {
     this.itemService.setCurrentItem(item);
   }
 
 
+
   ngOnInit() {
-    this.itemService.getItems()
+
+    this.itemService.findItemList()
       .subscribe( data => {
         this.items = data;
+        this.route.params
+          .subscribe( params => this.type = params.type );
       });
-      this.type = 'all';
+
+      
+
   }
 
 }
