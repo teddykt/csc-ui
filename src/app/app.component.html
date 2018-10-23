@@ -18,12 +18,12 @@
             </form>
         </div>
 
-        <div class="header__login">
+        <div class="header__login"*ngIf="!loggedIn">
             <a routerLinkActive="active" routerLink="/signin"> Sign In </a>
             <a routerLinkActive="active" routerLink="/signup"> Sign Up</a>
         </div>
 
-        <div class="header__icons" [hidden]="!loggedIn">
+        <div class="header__icons" *ngIf="loggedIn">
             <div class="header__icons-box dropdown">
                 <svg class="header__icon dropbtn">
                     <use xlink:href="assets/img/sprite.svg#icon-user1"></use>

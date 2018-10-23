@@ -49,6 +49,7 @@ onSubmit() {
                         this.currentCart = this.cartService.getCurrentCart();
                       });
                 });
+                window.location.href = '/home';
       }
       else {
         this.incorrect = true ;
