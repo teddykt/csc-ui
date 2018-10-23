@@ -2,13 +2,13 @@
     <header class="header">
             <a class="header__logo" routerLinkActive="active" routerLink="/home"> <img src="../assets/chandelier-off.png" alt="logo" class ="logo"> </a>
             <div class="header__shop">
-                    <a routerLinkActive="active" routerLink="/shop" >Shop</a>
-                    <a routerLinkActive="active" routerLink="/admin">Shop</a>
+                    <a routerLinkActive="" class="header__shop" routerLink="/shop" >Shop</a>
+                    <a routerLinkActive="" class="header__shop" routerLink="/admin">Shop</a>
             </div>
         
 
         <div class="header__search">
-            <form action="#" class="search">
+            <form action="#" class="header__search">
                 <input type="text" class="search__input" placeholder="Search">
                 <button class="search__button">
                     <svg class="search__icon">
@@ -29,7 +29,7 @@
                     <use xlink:href="assets/img/sprite.svg#icon-user1"></use>
                 </svg>
                 <div class="dropdown-content">
-                    <a routerLinkActive="active" routerLink="/myProfile">My profile</a>
+                    <a routerLinkActive="active" routerLink="/profile">My profile</a>
                     <a routerLinkActive="active" routerLink="/myOrder">My orders</a>
                     <a routerLinkActive="active" routerLink="/logout">Log out</a>
                 

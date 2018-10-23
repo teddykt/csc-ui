@@ -1,45 +1,41 @@
-add Item
-
-<form>
-
-		<label for="name">name</label>
-		<input type="text" [(ngModel)]="item.name" name="name">
-		<label for="name">price</label>
-		<input type="text" [(ngModel)]="item.price" name="price">
-
-		<label for="name">detail</label>
-		<input type="text" [(ngModel)]="item.detail" name="detail">
-		<label for="name">quantity</label>
-    <input type="text" [(ngModel)]="item.quantity" name="quantity">
-    <br>
-
-		<label for="name">type</label>
-    <input type="radio" [(ngModel)]="item.type" name="type" value="antique"> Antique
-    <input type="radio" [(ngModel)]="item.type" name="type" value="fashion" > fashion
-
-    <br>
- 
-    <div *ngIf="outer(item.type)">
-      <div *ngIf="antique(item.type)"> 
-        <label for="name">category</label>
+<div class="home-view">
+  <div class="sign-view">
+    <form>
+        <h2 class="sign-view__h2">Add Item</h2>
+        <input type="text" [(ngModel)]="item.name" placeholder="Product Name" name="name" class="sign-view__input">
+        <input type="text" [(ngModel)]="item.price" placeholder="Price" name="price" class="sign-view__input">
+        <input type="text" [(ngModel)]="item.detail" placeholder="Detail" name="detail" class="sign-view__input">
+        <input type="text" [(ngModel)]="item.quantity" placeholder="Quantity" name="quantity" class="sign-view__input">
         <br>
-        <input type="radio" [(ngModel)]="item.category" name="kitchen" value="kitchen"> kitchen <br>
-        <input type="radio" [(ngModel)]="item.category" name="sofa" value="sofa"> sofa<br>
-        <input type="radio" [(ngModel)]="item.category" name="lamp" value="lamp"> lamp <br>
-        <input type="radio" [(ngModel)]="item.category" name="painting" value="painting"> painting<br>  
-      </div>
+        <label for="name">Type</label>
+        <input type="radio" [(ngModel)]="item.type" name="type" value="antique" class="sign-view__input"> Antique
+        <input type="radio" [(ngModel)]="item.type" name="type" value="fashion" class="sign-view__input"> Fashion
 
-      <div *ngIf="!antique(item.type)"> 
-        <label for="name">category</label>
         <br>
-        <input type="radio" [(ngModel)]="item.category" name="dress" value="dress"> dress <br>
-        <input type="radio" [(ngModel)]="item.category" name="top" value="top"> top<br>
-        <input type="radio" [(ngModel)]="item.category" name="bottom" value="bottom"> bottom <br>
-        <input type="radio" [(ngModel)]="item.category" name="shoes" value="shoes"> shoes<br>  
-      </div>
-    </div>
+    
+        <div *ngIf="outer(item.type)">
+          <div *ngIf="antique(item.type)"> 
+            <label for="name">category</label>
+            <br>
+            <input type="radio" [(ngModel)]="item.category" name="kitchen" value="kitchen"> kitchen <br>
+            <input type="radio" [(ngModel)]="item.category" name="sofa" value="sofa"> sofa<br>
+            <input type="radio" [(ngModel)]="item.category" name="lamp" value="lamp"> lamp <br>
+            <input type="radio" [(ngModel)]="item.category" name="painting" value="painting"> painting<br>  
+          </div>
 
-    <button class="btn btn-success" (click)="addItem()">add Item</button>
-    
-    
-</form>
+          <div *ngIf="!antique(item.type)"> 
+            <label for="name">category</label>
+            <br>
+            <input type="radio" [(ngModel)]="item.category" name="dress" value="dress"> dress <br>
+            <input type="radio" [(ngModel)]="item.category" name="top" value="top"> top<br>
+            <input type="radio" [(ngModel)]="item.category" name="bottom" value="bottom"> bottom <br>
+            <input type="radio" [(ngModel)]="item.category" name="shoes" value="shoes"> shoes<br>  
+          </div>
+        </div>
+
+        <button class="btn btn-success sign-view__btn" (click)="addItem()">add Item</button>
+        
+        
+    </form>
+  </div>
+</div>

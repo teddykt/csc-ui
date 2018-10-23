@@ -1,18 +1,17 @@
 <div class="home-view">
-  <div class="wrapper">
+  <div class="sign-view">
     <form class="form-signin" (ngSubmit)="onSubmit()">       
-      <h2 class="clean-font">Please login</h2>
-      <div [hidden]=!incorrect> Wrong username or password please try again</div>
-      <input type="text" class="form-control" name="username" [(ngModel)]="username" placeholder="Username" name="username" required autofocus="" />
+      <h2 class="sign-view__h2">Sign In</h2>
+      <div [hidden]=!incorrect> Please check your username and password</div>
+      <input type="text" class="sign-view__input" name="username" [(ngModel)]="username" placeholder="Username" name="username" required autofocus="" />
       <br />
       
-      <input type="password" class="form-control" name="password" [(ngModel)]="password" placeholder="Password" required /> 
+      <input type="password" class="sign-view__input" name="password" [(ngModel)]="password" placeholder="Password" required /> 
       <br />
-      <button class="btn btn-primary btn-block" type="submit" >Login</button>   
+      <button class="btn btn-primary btn-block sign-view__btn" type="submit" >Login</button>   
     </form>
   </div>
-  <div [hidden]="loggedIn" > Please login</div>
   <div [hidden]="!loggedIn">
-    <h2> you are logged in </h2>
+    <h2> You are logged in </h2>
   </div>  
 </div>
