@@ -22,6 +22,7 @@ body {
   font-family: "Nunito", sans-serif;
   font-weight: 300;
   color: #6D5D4B;
+  font-size: 1.4rem;
   line-height: 1.6;
   background-image: linear-gradient(to right bottom, rgba(47, 36, 28, 0.8), rgba(10, 7, 6, 0.8)), url("assets/img/bg.jpg");
 }
@@ -56,7 +57,8 @@ a {
   margin-left: 2rem;
 }
 .header__shop {
-  margin-left: 3.5rem;
+  margin-left: 2rem;
+  margin-right: 1rem;
 }
 .header__login {
   display: grid;
@@ -132,6 +134,9 @@ a {
   background-size: cover;
 }
 .home-view .chandelier {
+  align-items: center;
+}
+.home-view .chandelier__img {
   width: 45rem;
 }
 .home-view .chandelier__on {
@@ -147,6 +152,43 @@ a {
   display: none;
 }
 
+.sign-view {
+  background-color: #a68468;
+  border: solid #795d47 5px;
+  width: 35rem;
+  margin-top: 7rem;
+  display: flex;
+  justify-content: center;
+}
+.sign-view__h2 {
+  font-size: 2.5rem;
+  margin-top: 3rem;
+  color: #e8dfd7;
+  text-align: center;
+  text-transform: uppercase;
+}
+.sign-view__input {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #d2c0b2;
+  color: #2f241c;
+  border: none;
+  border-radius: 2px;
+}
+.sign-view__btn {
+  background-color: #795d47 !important;
+  margin-top: 2rem;
+  text-align: center !important;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: block;
+  translate: all 0.2s;
+}
+.sign-view__btn:hover {
+  transform: scale(1.05);
+}
+
 .search {
   flex: 0 0 40%;
   display: flex;
@@ -159,7 +201,7 @@ a {
   color: inherit;
   background-color: #e8dfd7;
   border: none;
-  padding: 0.7rem 2rem;
+  padding: 1rem 2rem;
   border-radius: 100px;
   width: 90%;
   transition: all 0.2s;
@@ -188,8 +230,8 @@ a {
   transform: translateY(2px);
 }
 .search__icon {
-  height: 2rem;
-  width: 2rem;
+  height: 1.8rem;
+  width: 1.8rem;
 }
 
 @font-face {

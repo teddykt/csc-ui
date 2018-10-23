@@ -21,7 +21,11 @@
     background-size: cover;
 
     .chandelier{
-        width: 45rem;
+        align-items: center;
+        
+        &__img{
+            width: 45rem;
+        }
         &__on{
             display: none;
         }
@@ -45,8 +49,46 @@
     
 }
 
+.sign-view{
+    background-color: $color-primary;
+    border: solid $color-primary-dark 5px;
+    width: 35rem;
+    margin-top: 7rem;
+    display: flex;
+    justify-content: center;
 
+    &__h2{
+        font-size: $font-xl;
+        margin-top: 3rem;
+        color: $color-primary-lightest;
+        text-align:center;
+        text-transform: uppercase;
+    }
 
+    &__input{
+        margin-top: 2rem;
+        padding: 1rem;
+        background-color: $color-primary-light;
+        color: $color-primary-darkest;
+        border: none;
+        border-radius: 2px;
+    }
+
+    &__btn{
+        background-color: $color-primary-dark !important;
+        margin-top: 2rem;
+        text-align: center !important;
+        margin: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        display: block;
+        translate: all .2s;
+
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+}
 
 
 
@@ -66,7 +108,7 @@
         color: inherit;
         background-color: $color-primary-lightest;
         border: none;
-        padding: .7rem 2rem;
+        padding: 1rem 2rem;
         border-radius: 100px;
         width: 90%;
         transition: all .2s;
@@ -102,8 +144,10 @@
     }
 
     &__icon {
-        height: 2rem;
-        width: 2rem;
+        
+        height: 1.8rem;
+        width: 1.8rem;
+
     }
 }
 

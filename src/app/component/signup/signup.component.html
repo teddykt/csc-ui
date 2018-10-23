@@ -1,25 +1,15 @@
 <div class="home-view">
-  <form>
-
-
-      <label for="username">username</label>
-      <input type="text" [(ngModel)]="user.username" name="username">
-
-      <label for="email">email</label>
-      <input type="text" [(ngModel)]="user.email" placeholder="Email" name="email" class="form-control" id="email">
-
-      <label for="password">password</label>
-      <input type="text" [(ngModel)]="user.password" name="password">
-
-      <label for="phone">phone</label>
-      <input type="text" [(ngModel)]="user.phone" name="phone">
-
-      <label for="lastName">lastName</label>
-      <input type="text" [(ngModel)]="user.lastName" name="lastName">
-
-      <label for="firstName">firstName</label>
-      <input type="text" [(ngModel)]="user.firstName" name="firstName">
-
-      <button class="btn btn-success" (click)="createUser()">Create</button>
-  </form>
+  <div class="sign-view">
+      <form>
+          <h2 class="sign-view__h2">Sign Up</h2>
+          <input type="text" [(ngModel)]="user.username" placeholder="User ID" name="username" class="sign-view__input"><br>
+          <input type="text" [(ngModel)]="user.password" placeholder="Password" name="password" class="sign-view__input"><br>
+          <input type="text" [(ngModel)]="user.lastName" placeholder="Last Name" name="lastName" class="sign-view__input"><br>
+          <input type="text" [(ngModel)]="user.firstName" placeholder="First Name" name="firstName" class="sign-view__input"><br>
+          <input type="text" [(ngModel)]="user.email" placeholder="Email" name="email" class="sign-view__input" id="email"><br>
+          <input type="text" [(ngModel)]="user.phone" placeholder="Phone Number" name="phone" class="sign-view__input"><br>
+          <button class="btn btn-success sign-view__btn" (click)="createUser()">Create</button>
+      </form>
+    
+  </div>
 </div>
