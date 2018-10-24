@@ -1,39 +1,5 @@
 <div class="shop-main">
-    <nav class="navbar">
-        <div class="type">
-          
-          <button class="type__btn">  
-            <a routerLinkActive="active" routerLink="/shop/antique" >Antiques</a>
-          </button>
-          <ul class="categories">
-            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/kitchen" class="categories__link" >Kitchen</a></li>
-            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/sofa" class="categories__link">Sofa</a></li>
-            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/bed" class="categories__link">Bed</a></li>
-            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/lamp" class="categories__link">Lamps</a></li>
-            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/figures" class="categories__link">Figures</a></li>
-            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/painting" class="categories__link">Painting</a></li>
-          </ul>
-        </div>
-        
-        <div class="type" >
-
-          <button class="type__btn">  
-            <a routerLinkActive="active" routerLink="/shop/fashion" >Fashion</a>
-          </button>
-          <ul class="categories">
-            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/dress" class="categories__link">Dress</a></li>
-            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/top" class="categories__link">Top</a></li>
-            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/bottom" class="categories__link">Bottom</a></li>
-            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/accessories" class="categories__link">Accessories</a></li>
-            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/shoes" class="categories__link">Shoes</a></li>
-            <li class="categories__item"><a routerLinkActive="active" routerLink="/shop/bag" class="categories__link">Bag</a></li>
-          </ul>
-        </div>
-        
-        <div class="legal">
-            &copy; 2018 ON by Ted K and Christine L. <br> All rights reserved. 
-        </div>
-      </nav>
+    <app-navbar></app-navbar>
 
   <div class="shop-view">
      {{ type }}
