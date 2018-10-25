@@ -48,7 +48,7 @@ a {
   background-color: #d2c0b2;
   height: 7rem;
   display: grid;
-  grid-template-columns: 5rem 30rem 50rem 30rem 10rem;
+  grid-template-columns: 5rem 40rem 40rem 39rem 5rem;
   align-items: center;
 }
 .header__logo {
@@ -187,6 +187,17 @@ a {
 }
 .sign-view__btn:hover {
   transform: scale(1.05);
+}
+
+.admin {
+  margin: auto !important;
+  display: block !important;
+  margin-top: 2rem !important;
+}
+
+.category {
+  display: flex;
+  align-items: baseline;
 }
 
 .search {
