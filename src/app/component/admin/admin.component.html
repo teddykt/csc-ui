@@ -2,20 +2,21 @@
   <div class="sign-view">
     <form>
         <h2 class="sign-view__h2">Add Item</h2>
-        <input type="text" [(ngModel)]="item.name" placeholder="Product Name" name="name" class="sign-view__input">
-        <input type="text" [(ngModel)]="item.price" placeholder="Price" name="price" class="sign-view__input">
-        <input type="text" [(ngModel)]="item.detail" placeholder="Detail" name="detail" class="sign-view__input">
-        <input type="text" [(ngModel)]="item.quantity" placeholder="Quantity" name="quantity" class="sign-view__input">
+        <input type="text" [(ngModel)]="item.name" placeholder="Product Name" name="name" class="sign-view__input admin">
+        <input type="text" [(ngModel)]="item.price" placeholder="Price" name="price" class="sign-view__input admin">
+        <input type="text" [(ngModel)]="item.detail" placeholder="Detail" name="detail" class="sign-view__input admin">
+        <input type="text" [(ngModel)]="item.quantity" placeholder="Quantity" name="quantity" class="sign-view__input admin">
         <br>
-        <label for="name">Type</label>
-        <input type="radio" [(ngModel)]="item.type" name="type" value="antique" class="sign-view__input"> Antique
-        <input type="radio" [(ngModel)]="item.type" name="type" value="fashion" class="sign-view__input"> Fashion
+        <div class="category">
+          <input type="radio" [(ngModel)]="item.type" name="type" value="antique" class="sign-view__input admin"> <div>Antique</div>
+          <input type="radio" [(ngModel)]="item.type" name="type" value="fashion" class="sign-view__input admin"> <div>Fashion</div>
+        </div>
 
         <br>
     
         <div *ngIf="outer(item.type)">
           <div *ngIf="antique(item.type)"> 
-            <label for="name">category</label>
+            <label for="name">Type</label>
             <br>
             <input type="radio" [(ngModel)]="item.category" name="kitchen" value="kitchen"> kitchen <br>
             <input type="radio" [(ngModel)]="item.category" name="sofa" value="sofa"> sofa<br>
@@ -24,7 +25,7 @@
           </div>
 
           <div *ngIf="!antique(item.type)"> 
-            <label for="name">category</label>
+            <label for="name">Type</label>
             <br>
             <input type="radio" [(ngModel)]="item.category" name="dress" value="dress"> dress <br>
             <input type="radio" [(ngModel)]="item.category" name="top" value="top"> top<br>

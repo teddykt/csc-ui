@@ -90,7 +90,16 @@
     }
 }
 
+.admin{
+    margin: auto !important;
+    display: block !important;
+    margin-top: 2rem !important;
+}
 
+.category{
+    display: flex;
+    align-items: baseline;
+}
 
 ////////////////////////////////////////
 // SEARCH
