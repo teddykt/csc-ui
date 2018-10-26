@@ -17,7 +17,8 @@ export class SignupComponent implements OnInit {
         .subscribe( data => {
           alert("User created successfully. Please sign in!");
           window.location.href = '/signin';
-        })
+        },
+      err => {alert("User ID or email already exist");})
   };
 
   ngOnInit() {

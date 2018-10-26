@@ -18,12 +18,12 @@
             </form>
         </div>
 
-        <div class="header__login"*ngIf="!loggedIn">
+        <div class="header__login" *ngIf="!loginService.loggedIn">
             <a routerLinkActive="active" routerLink="/signin"> Sign In </a>
             <a routerLinkActive="active" routerLink="/signup"> Sign Up</a>
         </div>
 
-        <div class="header__icons" *ngIf="loggedIn">
+        <div class="header__icons" *ngIf="loginService.loggedIn">
             <div class="header__icons-box dropdown">
                 <svg class="header__icon dropbtn">
                     <use xlink:href="assets/img/sprite.svg#icon-user1"></use>
@@ -31,7 +31,7 @@
                 <div class="dropdown-content">
                     <a routerLinkActive="active" routerLink="/profile">My profile</a>
                     <a routerLinkActive="active" routerLink="/myOrder">My orders</a>
-                    <a routerLinkActive="active" routerLink="/logout">Log out</a>
+                    <a  (click)="logout()">Log out</a>
                 
                 </div>
             </div>
@@ -45,7 +45,6 @@
             </a>
 
         </div>
-
     </header>
 
 <router-outlet></router-outlet>

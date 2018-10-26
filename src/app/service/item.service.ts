@@ -34,7 +34,7 @@ export class ItemService {
   }
 
   public addItem(item) {
-    return this.http.post<Item>(this.itemUrl + "/"+ "add", item, { withCredentials: true });
+    return this.http.post<Item>(this.itemUrl + "/"+ "add", item);
   }
 
   public getCurrentItem() {

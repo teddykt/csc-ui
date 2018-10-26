@@ -17,28 +17,22 @@ import { UserService } from '../../service/user.service';
 export class ItemComponent implements OnInit {
   
   item: Item;
-  cart: Cart = new Cart();
   cartItem: CartItem = new CartItem();
-  currentCart: Cart;
-  currentUser: User;
+  itemQty: number;
 
   goBack() {
     window.history.back();
 
   }
   
-
-  
   addToCart(): void {
-    console.log(this.currentUser);
             this.cartItem.item = this.item;
-            this.cartItem.cart = this.currentCart;
-            this.cartItem.qty = 3;
-            this.cartItem.subTotal = 300;
+            this.cartItem.cart = this.cartService.currentCart;
+            this.cartItem.qty = this.itemQty;
+            this.cartItem.subTotal = (this.itemQty * this.item.price);
             console.log(this.cartItem);
             this.cartItemService.addToCart(this.cartItem)
               .subscribe( data => {
-                
                 console.log(data);
                 alert("Item added to cart successfully.");
               });
@@ -47,8 +41,6 @@ export class ItemComponent implements OnInit {
 
   ngOnInit() {
     this.item = this.itemService.getCurrentItem();
-    this.currentCart = this.cartService.getCurrentCart();
-    this.currentUser = this.userService.getCurrentUser();
     console.log(this.item);
   }
 }

@@ -1,3 +1,5 @@
+import { CartItem } from "./cartItem.model";
+
 export class Item {
 
     id: number;
@@ -7,5 +9,5 @@ export class Item {
     quantity: number;
     type: string;
     category: string;
-
+    cartItem: CartItem;
 }

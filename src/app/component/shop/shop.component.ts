@@ -13,27 +13,21 @@ export class ShopComponent implements OnInit {
   items: Item[];
   type: string;
   
-
   constructor(private route: ActivatedRoute, private itemService: ItemService) { }
-
-
-
 
   onClick(item): void {
     this.itemService.setCurrentItem(item);
   }
-
-
 
   ngOnInit() {
 
     this.itemService.findItemList()
       .subscribe( data => {
         this.items = data;
-        this.route.params
-          .subscribe( params => this.type = params.type );
+       
       });
-
+    this.route.params
+              .subscribe( params => this.type = params.type );
       
 
   }

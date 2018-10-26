@@ -6,6 +6,9 @@ import { Observable } from 'rxjs';
 import { ItemService } from '../../service/item.service';
 import { User } from '../../model/user.model';
 import { UserService } from '../../service/user.service';
+import { CartItemService } from '../../service/cartItem.service';
+import { CartItem } from '../../model/cartItem.model';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -16,24 +19,27 @@ export class CartComponent implements OnInit {
 
   currentCart: Cart;
   currentUser: User;
+  currentCartItems: CartItem[];
 
-  // remove(cart) {
-  //   this. = cart;
-  //   this.cartService.removeCart(this.cart)
-  //   .subscribe( data => {
-  //     alert("Item deleted from cart successfully.");
-  //   }); 
-  //     console.log(this.cart);
-  // }
+  remove(cartItem) {
+    console.log(cartItem)
+    this.cartItemService.removeCartItem(cartItem)
+    .subscribe( data => {
+      alert("Item deleted from cart successfully.");
+      this.cartItemService.getItemsInCart(this.cartService.currentCart)
+      .subscribe( data => this.currentCartItems = data)
+    
+    }); 
+  }
   
-  constructor(private cartService: CartService, private userService: UserService) { }
+  constructor(private router:Router, private cartService: CartService, private cartItemService: CartItemService, private userService: UserService) { }
 
   ngOnInit() {  
-    this.currentCart = this.cartService.getCurrentCart();
-    this.currentUser = this.userService.getCurrentUser();
+    this.currentCart = this.cartService.currentCart;
+    this.currentUser = this.userService.currentUser;
+    this.cartItemService.getItemsInCart(this.cartService.currentCart)
+      .subscribe( data => this.currentCartItems = data)
     
-    console.log(this.currentUser);
-    console.log(this.currentCart);
   }
 
 }

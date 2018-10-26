@@ -8,15 +8,15 @@
     <h2 class="heading-secondary">
         Your Shopping Cart
     </h2>
-    <div class="cart-view__each" *ngFor="let cartItem of currentCart.cartItem">
+    <div class="cart-view__each" *ngFor="let cartItem of currentCartItems">
         <a routerLinkActive="active" routerLink="/item" class="division">
           <div class="cart-view__each--img"><img src="assets/img/frame.png" alt=""></div>
           <div class="division__2">
-          <div class="cart-view__each--name"> {{ cart.item.name}} </div>
-          <div class="cart-view__each--price"> {{ cart.item.price }} </div>
-          <div class="cart-view__each--comment"> {{ cart.item.detail }} </div>
-          <div class="cart-view__each--quantity"> {{ cart.item.quantity }} </div>
-          <div class="cart-view__each--quantity"> {{ cart.item.id }} </div>
+          <div class="cart-view__each--name"> {{ cartItem.item.name}} </div>
+          <div class="cart-view__each--price"> {{ cartItem.item.price }} </div>
+          <div class="cart-view__each--comment"> {{ cartItem.item.detail }} </div>
+          <div class="cart-view__each--quantity"> {{ cartItem.qty }} </div>
+          <div class="cart-view__each--subTotal"> {{ cartItem.subTotal }} </div>
           
 
             </div>
@@ -26,7 +26,7 @@
                   <use xlink:href="assets/img/sprite.svg#.iconnew-message"></use>
               </svg>
               change quantity</button>
-          <button class="btn cart-view__each--btn" (click)="remove( cart )">
+          <button class="btn cart-view__each--btn" (click)="remove(cartItem)">
               <svg class="btn__icon">
                   <use xlink:href="assets/img/sprite.svg#.iconcup"></use>
               </svg>

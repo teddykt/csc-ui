@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 import { LoginService } from '../../service/login.service';
 import { Cart } from '../../model/cart.model';
 import { CartService } from '../../service/cart.service';
+import { CartItemService } from '../../service/cartItem.service';
 
 // import { AuthService } from '../auth.service';
 @Component({
@@ -16,10 +17,16 @@ import { CartService } from '../../service/cart.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor( ) {
+  constructor(private userService:UserService, private cartService: CartService, private cartItemService: CartItemService ) {
     
   }
   ngOnInit() { 
+    console.log(this.userService.currentUser)
+    console.log(this.cartService.currentCart)
+    
+    this.cartItemService.getItemsInCart(this.cartService.currentCart)
+    .subscribe(data=> console.log(data))
+
   }
 
 }

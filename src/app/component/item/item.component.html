@@ -23,19 +23,19 @@
           <div class="item-view__detail--price"> {{ item.price }} </div>
           <div class="item-view__detail--points"> {{ item.detail }} </div>
 
-          <form action="" class="item-view__detail--quantity">
+          <form action="" class="item-view__detail--quantity" (ngSubmit)="addToCart()">
             <label for="quantity" class="item-view__detail--label"> Quantity: </label>
-            <input type="number" class="item-view__detail--input">
+            <input type="number" class="item-view__detail--input" [(ngModel)]="itemQty" name="itmeQty">
+          
+            <br>
+            <button class="btn item-view__detail--btn" type="submit"> 
+                  <svg class="btn__icon">
+                      <use xlink:href="assets/img/sprite.svg#icon-cart"></use>
+                  </svg>
+
+                  add to cart
+            </button>
           </form>
-
-          <button class="btn item-view__detail--btn" type="submit" (click)="addToCart()"> 
-                <svg class="btn__icon">
-                    <use xlink:href="assets/img/sprite.svg#icon-cart"></use>
-                </svg>
-
-                add to cart
-          </button>
-
             <button class="btn item-view__detail--btn" (click)=goBack()> 
                 <svg class="btn__icon">
                     <use xlink:href="assets/img/sprite.svg#.iconback"></use>

@@ -3,7 +3,7 @@ import { Cart } from "./cart.model";
 
 export class User {
 
-    userId: number;
+    id: number;
     username: string;
     password: string;
     firstName: string;
@@ -11,6 +11,4 @@ export class User {
     email: string;
     phone: string;
     cart: Cart;
-    history: Array<Item>;
-    enabled: boolean = true;
 }

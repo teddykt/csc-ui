@@ -1,12 +1,12 @@
 <div class="home-view">
   <div class="sign-view">
-    <form class="form-signin" (ngSubmit)="onSubmit()">       
+    <form class="form-signin" (ngSubmit)="login()">       
       <h2 class="sign-view__h2">Sign In</h2>
-      <div [hidden]=!incorrect> Please check your username and password</div>
-      <input type="text" class="sign-view__input" name="username" [(ngModel)]="username" placeholder="Username" name="username" required autofocus="" />
+      <div *ngIf="loginService.incorrect"> Please check your username and password</div>
+      <input type="text" class="sign-view__input" name="username" [(ngModel)]="loginData.username" placeholder="Username" name="username" required autofocus="" />
       <br />
       
-      <input type="password" class="sign-view__input" name="password" [(ngModel)]="password" placeholder="Password" required /> 
+      <input type="password" class="sign-view__input" name="password" [(ngModel)]="loginData.password" placeholder="Password" required /> 
       <br />
       <button class="btn btn-primary btn-block sign-view__btn" type="submit" >Login</button>   
     </form>
