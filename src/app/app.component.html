@@ -3,7 +3,7 @@
             <a class="header__logo" routerLinkActive="active" routerLink="/home"> <img src="../assets/chandelier-off.png" alt="logo" class ="logo"> </a>
             <div class="header__shop">
                     <a routerLinkActive="" class="header__shop" routerLink="/shop" >Shop</a>
-                    <a routerLinkActive="" class="header__shop" routerLink="/admin">Shop</a>
+                    <a *ngIf="isAdmin" routerLinkActive="" class="header__shop" routerLink="/admin">Admin</a>
             </div>
         
 
@@ -19,33 +19,34 @@
         </div>
         <div class="header__test"></div>
 
-        <div class="header__login" *ngIf="!loginService.loggedIn">
+        <div class="header__login" *ngIf="!loginService.loggedIn;else loggedIn">
             <a routerLinkActive="active" routerLink="/signin"> Sign In </a>
             <a routerLinkActive="active" routerLink="/signup"> Sign Up</a>
         </div>
 
-        <div class="header__icons" *ngIf="loginService.loggedIn">
-            <div class="header__icons-box dropdown">
-                <svg class="header__icon dropbtn">
-                    <use xlink:href="assets/img/sprite.svg#icon-user1"></use>
-                </svg>
-                <div class="dropdown-content">
-                    <a routerLinkActive="active" routerLink="/profile">My profile</a>
-                    <a routerLinkActive="active" routerLink="/myOrder">My orders</a>
-                    <a  (click)="logout()">Log out</a>
-                
+        <ng-template  #loggedIn>
+            <div class="header__icons">
+                <div class="header__icons-box dropdown">
+                    <svg class="header__icon dropbtn">
+                        <use xlink:href="assets/img/sprite.svg#icon-user1"></use>
+                    </svg>
+                    <div class="dropdown-content">
+                        <a routerLinkActive="active" routerLink="/profile">My profile</a>
+                        <a routerLinkActive="active" routerLink="/myOrder">My orders</a>
+                        <a  (click)="logout()">Log out</a>
+                    
+                    </div>
                 </div>
+
+                <a routerLinkActive="active" routerLink="/cart">
+                <div class="header__icons-box">
+                    <svg class="header__icon">
+                        <use xlink:href="assets/img/sprite.svg#icon-cart"></use>
+                    </svg>
+                </div>
+                </a>
             </div>
-
-            <a routerLinkActive="active" routerLink="/cart">
-              <div class="header__icons-box">
-                  <svg class="header__icon">
-                      <use xlink:href="assets/img/sprite.svg#icon-cart"></use>
-                  </svg>
-              </div>
-            </a>
-
-        </div>
+        </ng-template>
     </header>
 
 <router-outlet></router-outlet>

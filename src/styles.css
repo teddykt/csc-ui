@@ -22,7 +22,7 @@ body {
   font-family: "Nunito", sans-serif;
   font-weight: 300;
   color: #6D5D4B;
-  font-size: 1.4rem;
+  font-size: 1.9rem;
   line-height: 1.6;
   background-image: linear-gradient(to right bottom, rgba(47, 36, 28, 0.8), rgba(10, 7, 6, 0.8)), url("assets/img/bg.jpg");
 }
@@ -48,11 +48,11 @@ a {
   background-color: #d2c0b2;
   height: 7rem;
   display: grid;
-  grid-template-columns: 5rem 40rem 40rem 39rem 5rem;
+  grid-template-columns: 5rem 40rem 45rem 25rem 15rem;
   align-items: center;
 }
 .header__logo {
-  width: 5rem;
+  width: 10rem;
   height: 5rem;
   margin-left: 2rem;
 }
@@ -62,7 +62,7 @@ a {
 }
 .header__login {
   display: grid;
-  grid-template-columns: repeat(2, 6rem);
+  grid-template-columns: repeat(2, 9rem);
   justify-content: end;
 }
 .header__icons {
@@ -155,7 +155,7 @@ a {
 .sign-view {
   background-color: #a68468;
   border: solid #795d47 5px;
-  width: 35rem;
+  width: 40rem;
   margin-top: 7rem;
   display: flex;
   justify-content: center;
@@ -220,7 +220,7 @@ a {
 }
 .search__input:focus {
   outline: none;
-  width: 100%;
+  width: 95%;
   background-color: #e8dfd7;
 }
 .search__input::-webkit-input-placeholder {

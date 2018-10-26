@@ -11,11 +11,11 @@
     height: 7rem;
 
     display: grid;
-    grid-template-columns: 5rem 40rem 40rem 39rem 5rem;
+    grid-template-columns: 5rem 40rem 45rem 25rem 15rem;
     align-items: center;
 
     &__logo{
-        width: 5rem;
+        width: 10rem;
         height: 5rem;
         margin-left: 2rem; 
     }
@@ -31,7 +31,7 @@
 
     &__login{
         display: grid;
-        grid-template-columns: repeat(2, 6rem);
+        grid-template-columns: repeat(2, 9rem);
         justify-content: end;
 
         

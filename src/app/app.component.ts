@@ -11,7 +11,7 @@ import { CartService } from './service/cart.service';
 })
 export class AppComponent implements OnInit {
   loggedIn: boolean;
-
+  isAdmin: boolean;
   constructor (private loginService:LoginService, private userService:UserService, private cartService:CartService) {
         this.loggedIn = this.loginService.loggedIn;
   }

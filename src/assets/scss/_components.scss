@@ -52,7 +52,7 @@
 .sign-view{
     background-color: $color-primary;
     border: solid $color-primary-dark 5px;
-    width: 35rem;
+    width: 40rem;
     margin-top: 7rem;
     display: flex;
     justify-content: center;
@@ -125,7 +125,7 @@
 
         &:focus {
             outline: none;
-            width: 100%;
+            width: 95%;
             background-color: $color-primary-lightest;
         }
 
